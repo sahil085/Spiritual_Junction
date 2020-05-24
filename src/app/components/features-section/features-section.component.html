@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="feature-header">
+        Our Features
+      </div>
+      <ul class="feature-section">
+        <li *ngFor="let feature of features; index as i;"
+            [ngClass]="{'feature-container': true, 'left': i%2===0, 'right': i%2===1}"
+        >
+          <div class="feature-img">
+            <img src="{{feature.image}}" alt="{{feature.title}}"/>
+          </div>
+          <div class="feature-content">
+            <div class="feature-title">
+              {{feature.title}}
+            </div>
+            <p class="feature-desc">
+              {{feature.description}}
+            </p>
+            <button [ngClass]="'round-btn'">
+              LEARN MORE
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
