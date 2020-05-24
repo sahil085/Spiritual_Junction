@@ -1,0 +1,30 @@
+.expert-header {
+  font-size: 32px;
+  text-align: center;
+  margin: 30px;
+}
+
+.expert-section .img-wrapper {
+  width: 50%;
+  margin: 12px auto;
+}
+
+.expert-section .expert-name {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 140%;
+  text-align: center;
+}
+
+.expert-section .expert-desig {
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+}
+
+.expert-section .img-wrapper > img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 150px;
+  text-align: center;
+}
