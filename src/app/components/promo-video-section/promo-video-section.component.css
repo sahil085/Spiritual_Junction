@@ -1,0 +1,45 @@
+.promo-section .promo-title {
+  font-size: 2rem;
+}
+
+.promo-section .promo-description {
+  font-size: 20px;
+}
+
+@media (min-width: 1280px) {
+  .promo-section {
+    display: flex;
+    align-items: center;
+  }
+
+  .promo-section > .half-container {
+    flex: 1;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .promo-section {
+    display: flex;
+    align-items: center;
+  }
+
+  .promo-section > .half-container {
+    flex: 1;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-section {
+    display: block;
+  }
+
+  .promo-section > .half-container {
+    padding: 0 20px;
+  }
+
+  .promo-section iframe {
+    width: 100%;
+  }
+}

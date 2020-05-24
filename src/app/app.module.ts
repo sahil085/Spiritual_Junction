@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {DropdownModule} from 'primeng';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { PromoVideoSectionComponent } from './components/promo-video-section/promo-video-section.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PromoVideoSectionComponent
   ],
   imports: [
     BrowserModule,
