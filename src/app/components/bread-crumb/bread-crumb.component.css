@@ -1,0 +1,9 @@
+.content-wrapper {
+  width: 100%;
+  padding-top: 120px;
+  padding-left: 150px;
+  letter-spacing: 3px;
+  background-color: #0f6674;
+  color: white;
+  font-style: oblique;
+}
