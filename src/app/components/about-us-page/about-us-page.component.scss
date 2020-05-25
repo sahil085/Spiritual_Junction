@@ -1,0 +1,15 @@
+.container .row {
+  line-height: 140%;
+
+  & .main-title, .para-title {
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  & .main-title {
+    font-size: 32px;
+    color: #0f6674;
+    line-height: 120%;
+  }
+}
