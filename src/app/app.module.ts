@@ -70,6 +70,7 @@ const primeNgModules = [
 import {PromoVideoSectionComponent} from './components/promo-video-section/promo-video-section.component';
 import {FeaturesSectionComponent} from './components/features-section/features-section.component';
 import {ExpertsSectionComponent} from './components/experts-section/experts-section.component';
+import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import {ExpertsSectionComponent} from './components/experts-section/experts-sect
     LoginComponent,
     RegisterComponent,
     BreadCrumbComponent,
-    ExpertsSectionComponent
+    ExpertsSectionComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
