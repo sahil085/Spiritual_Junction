@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-experts-section',
   templateUrl: './experts-section.component.html',
-  styleUrls: ['./experts-section.component.css']
+  styleUrls: ['./experts-section.component.scss']
 })
 export class ExpertsSectionComponent implements OnInit {
   responsiveOptions = [];
