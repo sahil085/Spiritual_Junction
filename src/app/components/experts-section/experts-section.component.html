@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="expert-header">
+        Our Team of Experts
+      </div>
+      <p-carousel [value]="experts"
+                  [numVisible]="3"
+                  [numScroll]="1"
+                  [responsiveOptions]="responsiveOptions"
+                  [autoplayInterval]="6000"
+                  [circular]="true"
+                  [ngClass]="'expert-section'"
+      >
+        <ng-template let-expert pTemplate="item">
+          <p-card class="expert-card">
+            <div class="round img-wrapper">
+              <img src="{{expert.image}}" alt="{{expert.name}}"/>
+            </div>
+            <div class="expert-name">
+              {{expert.name}}
+            </div>
+            <ul>
+              <li *ngFor="let desig of expert.designation; index as i;"
+                  class="expert-desig"
+              >
+                {{desig}}
+              </li>
+            </ul>
+          </p-card>
+        </ng-template>
+      </p-carousel>
+    </div>
+  </div>
+</div>

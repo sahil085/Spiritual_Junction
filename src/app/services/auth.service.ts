@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import {AppUrl} from '../constants/app-url';
 @Injectable()
 export class AuthService {
 
@@ -18,7 +19,7 @@ export class AuthService {
     localStorage.removeItem('user');
     localStorage.removeItem('role');
 
-    this.myRoute.navigate(['login']);
+    this.myRoute.navigate([AppUrl.LOGIN]);
   }
 }
 

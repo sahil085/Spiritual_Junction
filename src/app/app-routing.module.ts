@@ -4,25 +4,34 @@ import {AccessDeniedComponent} from './components/access-denied/access-denied.co
 import {RegisterComponent} from './components/register/register.component';
 import {LoginComponent} from './components/login/login.component';
 import {HomeComponent} from './components/home/home.component';
+import {NotFoundPageComponent} from './components/not-found-page/not-found-page.component';
+import {AppUrl} from './constants/app-url';
 
 
 const routes: Routes = [
   {
-    path: '',
+    path: AppUrl.HOME_PAGE,
     component: HomeComponent
   },
   {
-    path: 'access-denied',
+    path: AppUrl.ACCESS_DENIED,
     component: AccessDeniedComponent,
   },
   {
-    path: 'login',
+    path: AppUrl.LOGIN,
     component: LoginComponent
-
   },
   {
-    path: 'register',
+    path: AppUrl.REGISTER,
     component: RegisterComponent
+  },
+  {
+    path: AppUrl.NOT_FOUND,
+    component: NotFoundPageComponent
+  },
+  {
+    path: '**',
+    redirectTo: '404'
   },
 ];
 

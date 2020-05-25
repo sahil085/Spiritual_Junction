@@ -4,7 +4,7 @@ import {SwiperOptions} from 'swiper';
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.css']
+  styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent implements OnInit {
 
