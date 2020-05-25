@@ -2,3 +2,25 @@
 <app-promo-video-section></app-promo-video-section>
 <app-features-section></app-features-section>
 <app-experts-section></app-experts-section>
+
+<!--Activities section-->
+<div class="section-container activity-section">
+  <div class="section-header">
+    Our Activities
+  </div>
+  <ul class="activity-list">
+    <li *ngFor="let activity of activities" class="activity-card">
+      <div class="image-wrapper">
+        <img src="{{activity.image}}" alt="{{activity.name}}"/>
+        <div class="text-content">
+          <span class="activity-name">{{activity.name}}</span>
+          <button class="round-btn">
+            <a routerLink="{{activity.action_btn_link}}">
+              {{activity.action_btn}}
+            </a>
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
