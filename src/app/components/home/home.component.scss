@@ -66,3 +66,16 @@
   height: 100%;
   object-fit: cover;
 }
+
+.call-to-action {
+  background-image: linear-gradient(to left, rgb(15, 102, 116, 0.7), rgb(15, 102, 116, 1)),
+  url('https://back2godhead.com/wp-content/uploads/2013/11/1978-09-09.jpg');;
+  background-position: center;
+  padding: 50px 40px;
+  margin-top: 50px;
+
+  & > .message {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+}

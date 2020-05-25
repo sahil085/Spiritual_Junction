@@ -13,7 +13,7 @@
                   [ngClass]="'expert-section'"
       >
         <ng-template let-expert pTemplate="item">
-          <p-card class="expert-card">
+          <div class="expert-card">
             <div class="round img-wrapper">
               <img src="{{expert.image}}" alt="{{expert.name}}"/>
             </div>
@@ -27,7 +27,7 @@
                 {{desig}}
               </li>
             </ul>
-          </p-card>
+          </div>
         </ng-template>
       </p-carousel>
     </div>
