@@ -52,6 +52,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FeaturesSectionComponent} from './components/features-section/features-section.component';
 import {ExpertsSectionComponent} from './components/experts-section/experts-section.component';
 import {NotFoundPageComponent} from './components/not-found-page/not-found-page.component';
+import {AuthServiceConfig, FacebookLoginProvider, GoogleLoginProvider, SocialLoginModule} from 'angularx-social-login';
 
 const primeNgModules = [
   AccordionModule,
@@ -84,6 +85,21 @@ const primeNgModules = [
   TooltipModule,
 ];
 
+const config = new AuthServiceConfig([
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider('550274808732-25ngp3589dugp6ba72crq96rls0f0s4t.apps.googleusercontent.com')
+  },
+  {
+    id: FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider('571885383735024')
+  }
+]);
+
+export function provideConfig() {
+  return config;
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -115,8 +131,12 @@ const primeNgModules = [
     NgxUsefulSwiperModule,
     HttpClientModule,
     CarouselModule,
+    SocialLoginModule
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, {
+    provide: AuthServiceConfig,
+    useFactory: provideConfig
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {

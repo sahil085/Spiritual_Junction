@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {AuthenticationService} from '../../services/security/authentication.service';
+import {AuthService, FacebookLoginProvider, GoogleLoginProvider, SocialUser} from 'angularx-social-login';
+import {SocialLogin} from '../../models/social-login';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +16,7 @@ export class LoginComponent implements OnInit {
 
 
   constructor(private router: Router, private route: ActivatedRoute,
-              private authService: AuthenticationService) {
+              private appAuthService: AuthenticationService, private authService: AuthService) {
   }
 
   ngOnInit() {
@@ -22,7 +24,30 @@ export class LoginComponent implements OnInit {
 
   login() {
     console.log(this.email + this.password);
-    this.authService.authenticate(this.email, this.password).subscribe(response => {
+    this.appAuthService.authenticate(this.email, this.password).subscribe(response => {
+      this.router.navigateByUrl('/');
+    });
+  }
+
+  signInWithGoogle(): void {
+    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then(socialusers => {
+      this.socialLogin(socialusers);
+    });
+  }
+
+  signInWithFB(): void {
+    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then(socialusers => {
+      this.socialLogin(socialusers);
+    });
+  }
+
+  socialLogin(socialUserDetails: SocialUser) {
+    const socialLoginDetails = new SocialLogin();
+    socialLoginDetails.email = socialUserDetails.email;
+    socialLoginDetails.name = socialUserDetails.name;
+    socialLoginDetails.photoUrl = socialUserDetails.photoUrl;
+    socialLoginDetails.provider = socialUserDetails.provider;
+    this.appAuthService.socialLoginAuthentication(socialLoginDetails).subscribe(response => {
       this.router.navigateByUrl('/');
     });
   }
