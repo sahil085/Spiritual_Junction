@@ -1,10 +1,7 @@
-import {Type} from 'class-transformer';
-import {Util} from '../utils/util';
-import {AppConst} from '../constants/app-const';
-import {Time} from '@angular/common';
 import {Session} from './session';
 import {Feedback} from './feedback';
 import {BaseModel} from './base-model';
+import {CourseCriteria} from './course-criteria';
 
 export class Course extends BaseModel {
 
@@ -24,6 +21,7 @@ export class Course extends BaseModel {
   features: string[];
   courseMaterial: string[];
   sessions: Session[];
+  courseCriteria: CourseCriteria;
   feedBacks: Feedback[];
 
 

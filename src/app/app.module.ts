@@ -52,6 +52,11 @@ import {HttpClientModule} from '@angular/common/http';
 import {FeaturesSectionComponent} from './components/features-section/features-section.component';
 import {ExpertsSectionComponent} from './components/experts-section/experts-section.component';
 import {NotFoundPageComponent} from './components/not-found-page/not-found-page.component';
+import { CreateCourseComponent } from './components/course/create-course/create-course.component';
+import { ViewCourseComponent } from './components/course/view-course/view-course.component';
+import { CourseDetailsComponent } from './components/course/course-details/course-details.component';
+import { CreateEditSessionComponent } from './components/course/create-edit-session/create-edit-session.component';
+import { SessionReportComponent } from './components/reports/session-report/session-report.component';
 
 const primeNgModules = [
   AccordionModule,
@@ -102,7 +107,12 @@ const primeNgModules = [
     BreadCrumbComponent,
     ExpertsSectionComponent,
     NotFoundPageComponent,
-    BreadCrumbComponent
+    BreadCrumbComponent,
+    CreateCourseComponent,
+    ViewCourseComponent,
+    CourseDetailsComponent,
+    CreateEditSessionComponent,
+    SessionReportComponent
   ],
   imports: [
     BrowserModule,
