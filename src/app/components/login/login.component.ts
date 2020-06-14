@@ -20,13 +20,18 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.authService.signOut();
   }
 
   login() {
-    console.log(this.email + this.password);
-    this.appAuthService.authenticate(this.email, this.password).subscribe(response => {
-      this.router.navigateByUrl('/');
-    });
+    this.appAuthService.authenticate(this.email, this.password).subscribe(
+      (response) => {
+        this.router.navigateByUrl('/');
+      }
+      , (error) => {
+        console.log(error);
+      }
+    );
   }
 
   signInWithGoogle(): void {
@@ -47,9 +52,14 @@ export class LoginComponent implements OnInit {
     socialLoginDetails.name = socialUserDetails.name;
     socialLoginDetails.photoUrl = socialUserDetails.photoUrl;
     socialLoginDetails.provider = socialUserDetails.provider;
-    this.appAuthService.socialLoginAuthentication(socialLoginDetails).subscribe(response => {
-      this.router.navigateByUrl('/');
-    });
+    this.appAuthService.socialLoginAuthentication(socialLoginDetails).subscribe(
+      (response) => {
+        this.router.navigateByUrl('/');
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
 }

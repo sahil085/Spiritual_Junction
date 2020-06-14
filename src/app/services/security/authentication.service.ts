@@ -5,7 +5,6 @@ import {Router} from '@angular/router';
 import {AppUrl} from '../../constants/app-url';
 import {environment} from '../../../environments/environment';
 import {UserAuthority} from '../../models/user-authority';
-import {BehaviorSubject, Observable} from 'rxjs';
 import {SocialLogin} from '../../models/social-login';
 import {AuthService} from 'angularx-social-login';
 import {AppScope} from '../../constants/app-scope';
@@ -29,18 +28,15 @@ export class AuthenticationService {
     return this.httpClient.post<UserAuthority>(`${this.apiUrl}/authenticate`, {username, password}).pipe(
       map(
         userData => {
-          userData.jwtToken = 'Bearer ' + userData.jwtToken;
-          userData.currentRole = userData.authorities[0];
-          localStorage.setItem('currentUser', JSON.stringify(userData));
-          localStorage.setItem('role', userData.authorities[0]);
           const userAuth = new UserAuthority();
+          userAuth.userName = userData.userName;
           userAuth.currentRole = userData.authorities[0];
           userAuth.authorities = userData.authorities;
           userAuth.jwtToken = 'Bearer ' + userData.jwtToken;
-          AppScope.setCurrentUser(userData);
-          return userData;
+          return userAuth;
         }
-      )
+      ),
+
     );
   }
 
@@ -53,32 +49,24 @@ export class AuthenticationService {
     return this.httpClient.post<UserAuthority>(`${this.apiUrl}/social-login`, socialLoginDetails).pipe(
       map(
         userData => {
-          userData.jwtToken = 'Bearer ' + userData.jwtToken;
-          userData.currentRole = userData.authorities[0];
-          localStorage.setItem('currentUser', JSON.stringify(userData));
-          localStorage.setItem('role', userData.authorities[0]);
-          this.currentUserSubject.next(userData);
+          const userAuth = new UserAuthority();
+          userAuth.userName = userData.userName;
+          userAuth.currentRole = userData.authorities[0];
+          userAuth.authorities = userData.authorities;
+          userAuth.jwtToken = 'Bearer ' + userData.jwtToken;
+          AppScope.setCurrentUser(userData);
           return userData;
         }
       )
     );
   }
 
-  currentUserValue() {
-    return this.currentUserSubject.value;
-  }
-
-  public getCurrentRole(): string {
-    return this.currentUserSubject.value.currentRole;
-  }
-
-
   logout() {
     // remove social login
     this.authService.signOut();
     // remove oauth cookie from backend
     this.httpClient.get(this.apiUrl).subscribe();
-    AppScope.setCurrentUser(new UserAuthority());
+    AppScope.setCurrentUser(null);
     this.router.navigateByUrl(AppUrl.LOGIN);
   }
 }
