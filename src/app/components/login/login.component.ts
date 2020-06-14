@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {AuthenticationService} from '../../services/security/authentication.service';
 import {AuthService, FacebookLoginProvider, GoogleLoginProvider, SocialUser} from 'angularx-social-login';
 import {SocialLogin} from '../../models/social-login';
+import {AppScope} from '../../constants/app-scope';
 
 @Component({
   selector: 'app-login',
@@ -20,13 +21,14 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.authService.signOut();
   }
 
   login() {
     this.appAuthService.authenticate(this.email, this.password).subscribe(
       (response) => {
-        this.router.navigateByUrl('/');
+        this.appAuthService.setAuthDetailsInCookie(response);
+        AppScope.setCurrentUser(response);
+        window.location.href = '/';
       }
       , (error) => {
         console.log(error);
@@ -54,7 +56,9 @@ export class LoginComponent implements OnInit {
     socialLoginDetails.provider = socialUserDetails.provider;
     this.appAuthService.socialLoginAuthentication(socialLoginDetails).subscribe(
       (response) => {
-        this.router.navigateByUrl('/');
+        this.appAuthService.setAuthDetailsInCookie(response);
+        AppScope.setCurrentUser(response);
+        window.location.href = '/';
       },
       (error) => {
         console.log(error);

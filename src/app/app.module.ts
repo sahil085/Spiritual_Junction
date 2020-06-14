@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {Injector, NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -48,11 +48,13 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {NgxUsefulSwiperModule} from 'ngx-useful-swiper';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BreadCrumbComponent} from './components/bread-crumb/bread-crumb.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {FeaturesSectionComponent} from './components/features-section/features-section.component';
 import {ExpertsSectionComponent} from './components/experts-section/experts-section.component';
 import {NotFoundPageComponent} from './components/not-found-page/not-found-page.component';
 import {AuthServiceConfig, FacebookLoginProvider, GoogleLoginProvider, SocialLoginModule} from 'angularx-social-login';
+import {ServiceLocator} from './models/service-locator';
+import {AuthHttpInterceptorService} from './services/security/auth-http-interceptor.service';
 
 const primeNgModules = [
   AccordionModule,
@@ -133,11 +135,16 @@ export function provideConfig() {
     CarouselModule,
     SocialLoginModule
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, {
-    provide: AuthServiceConfig,
-    useFactory: provideConfig
-  }],
+  providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
+    {provide: AuthServiceConfig, useFactory: provideConfig},
+    {provide: HTTP_INTERCEPTORS, useClass: AuthHttpInterceptorService, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
+
+  constructor(private injector: Injector) {    // Create global Service Injector.
+    ServiceLocator.injector = this.injector;
+  }
 }

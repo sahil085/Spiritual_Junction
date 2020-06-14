@@ -1,6 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Injector, OnInit} from '@angular/core';
 import {AppScope} from '../../constants/app-scope';
 import {UserAuthority} from '../../models/user-authority';
+import {AuthenticationService} from '../../services/security/authentication.service';
+import {ServiceLocator} from '../../models/service-locator';
 
 @Component({
   selector: 'app-base',
@@ -10,12 +12,15 @@ import {UserAuthority} from '../../models/user-authority';
 export class BaseComponent implements OnInit {
 
   currentUser: UserAuthority;
+  private authService: AuthenticationService;
 
   constructor() {
+    this.authService = ServiceLocator.injector.get(AuthenticationService);
+    this.getCurrentUserFromCookie();
+
   }
 
   ngOnInit() {
-    this.subscribeCurrentUserUpdate();
   }
 
   private subscribeCurrentUserUpdate() {
@@ -23,6 +28,18 @@ export class BaseComponent implements OnInit {
       .subscribe((user: UserAuthority) => {
         this.currentUser = user;
       });
+  }
+
+  private getCurrentUserFromCookie() {
+    const user = this.authService.getAuthUserDetailsFromCookie();
+    if (user) {
+      AppScope.setCurrentUser(user);
+      this.subscribeCurrentUserUpdate();
+    }
+  }
+
+  logout() {
+    this.authService.logout();
   }
 
 
