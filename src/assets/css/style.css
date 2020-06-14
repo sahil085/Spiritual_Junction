@@ -385,11 +385,6 @@ a:focus, a:hover {
   outline: none;
 }
 
-.logo {
-  margin-top: 10px;
-  display: inline-block;
-}
-
 .single-page-header {
   background-image: url("../images/about/about-header.jpg");
   background-size: cover;
@@ -424,7 +419,7 @@ a:focus, a:hover {
   color: #fff;
   font-size: 14px;
   line-height: 26px;
-  padding: 20px 15px;
+  padding: 6px 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: .2s ease-in-out 0s;
@@ -513,6 +508,7 @@ a:focus, a:hover {
   }
   .navigation .navbar-light .navbar-nav .nav-item .nav-link {
     color: #000;
+    border-color: #000;
   }
   .navigation .logo-white {
     display: none;
@@ -533,6 +529,7 @@ a:focus, a:hover {
 
 .sticky-header .navbar-light .navbar-nav .nav-item .nav-link {
   color: #000;
+  border-color: #000;
 }
 
 .sticky-header .logo-white {

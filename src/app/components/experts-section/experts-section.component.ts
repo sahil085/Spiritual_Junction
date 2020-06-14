@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ExpertsSectionComponent implements OnInit {
   responsiveOptions = [];
   experts = [{
-    name: 'HG Adbhut Narsimha Das',
+    name: 'HG Adbhut Narsimha Pr',
     image: 'http://raivens.com/wp-content/uploads/2016/08/Dummy-image.jpg',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
       'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, ' +
@@ -17,21 +17,21 @@ export class ExpertsSectionComponent implements OnInit {
     action_btn: 'KNOW MORE',
     action_btn_link: '/',
   }, {
-    name: 'HG Adbhut Narsimha Das',
+    name: 'HG Sarvamangal Gaur Pr',
     image: 'http://raivens.com/wp-content/uploads/2016/08/Dummy-image.jpg',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
       'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, ' +
       'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    designation: ['Ex. Software Engineer at Syntel Pvt. Ltd.', 'ABES Alumni', 'Lifestyle Coach'],
+    designation: ['CAT Topper', 'CS from IT,Indore'],
     action_btn: 'KNOW MORE',
     action_btn_link: '/',
   }, {
-    name: 'HG Adbhut Narsimha Das',
+    name: 'HG Atmaram Shyam Pr',
     image: 'http://raivens.com/wp-content/uploads/2016/08/Dummy-image.jpg',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
       'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, ' +
       'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    designation: ['Ex. Software Engineer at Syntel Pvt. Ltd.', 'ABES Alumni', 'Lifestyle Coach'],
+    designation: ['NSIT, IIT Delhi Alumni', 'Lifestyle Coach'],
     action_btn: 'KNOW MORE',
     action_btn_link: '/',
   }];

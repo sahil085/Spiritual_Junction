@@ -7,5 +7,17 @@ export class AppUrl {
   public static REGISTER = 'register';
   public static NOT_FOUND = '404';
 
+  public static CAMPS = 'camps';
+  public static SCHOOL_PROGRAMS = 'school-programs';
+  public static COLLEGE_PROGRAMS = 'college-programs';
+  public static ACTIVITIES = 'activities';
+  public static VEDIC_COURSES = 'vedic-courses';
+  public static COUNSELLING = 'counselling';
+  public static FESTIVALS = 'festivals';
+  public static SRILA_PRABHUPADA = 'srila-prabhupada';
+  public static ISKCON = 'iskcon';
+  public static ABOUT_US = 'about-us';
+  public static FAQ = 'faq';
+  public static CONTACT_US = 'contact-us';
 
 }

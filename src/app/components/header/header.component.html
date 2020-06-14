@@ -29,13 +29,11 @@ Fixed Navigation
               Activities
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="404.html">Our Activities</a>
-              <a class="dropdown-item" href="404.html">Youth Fest</a>
-              <a class="dropdown-item" href="404.html">Camps</a>
-              <a class="dropdown-item" href="404.html">Corporate Programs</a>
-              <a class="dropdown-item" href="404.html">Jail Programs</a>
-              <a class="dropdown-item" href="404.html">School Programs</a>
-              <a class="dropdown-item" href="404.html">College Programs</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.ACTIVITIES">Our Activities</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.FESTIVALS">Youth Fest</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.CAMPS">Camps</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.SCHOOL_PROGRAMS">School Programs</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.COLLEGE_PROGRAMS">College Programs</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -44,8 +42,8 @@ Fixed Navigation
               Education & Training
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="404.html">Vedic Courses</a>
-              <a class="dropdown-item" href="blog.html">Personal Mentors</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.VEDIC_COURSES">Vedic Courses</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.COUNSELLING">Personal Mentors</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -54,8 +52,8 @@ Fixed Navigation
               Festivals
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="404.html">UDGAAR 2019</a>
-              <a class="dropdown-item" href="blog.html">Vipalava</a>
+              <a class="dropdown-item" href="https://udgaar.in" target="_blank">UDGAAR 2019</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.FESTIVALS">Vipalava</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -64,23 +62,27 @@ Fixed Navigation
               About US
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="404.html">Srila Prabhupada</a>
-              <a class="dropdown-item" href="blog.html">ISKCON</a>
-              <a class="dropdown-item" href="blog.html">About US</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.SRILA_PRABHUPADA">Srila Prabhupada</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.ISKCON">ISKCON</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.ABOUT_US">About US</a>
             </div>
-          </li> <li class="nav-item dropdown">
+          </li>
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="contactUsDropdown" role="button" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
               Contact US
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="404.html">F.A.Q.</a>
-              <a class="dropdown-item" href="blog.html">Contact US</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.FAQ">F.A.Q.</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.CONTACT_US">Contact US</a>
             </div>
           </li>
-
-          <a routerLink="login" class="btn btn-transparent customBtn"> Login </a>
-          <button class="btn btn-transparent customBtn" style="margin-left: 10px"> Register </button>
+          <li class="nav-item">
+            <a [routerLink]="AppUrl.LOGIN" class="nav-link btn btn-transparent"> Login </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="AppUrl.REGISTER" class="nav-link btn btn-transparent" style="margin-left: 10px"> Register </a>
+          </li>
 
         </ul>
       </div>

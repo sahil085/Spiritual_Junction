@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {
-  AccordionModule,
+  AccordionModule, AutoCompleteModule,
   ButtonModule,
   CalendarModule,
   CardModule,
@@ -53,6 +53,11 @@ import {FeaturesSectionComponent} from './components/features-section/features-s
 import {ExpertsSectionComponent} from './components/experts-section/experts-section.component';
 import {NotFoundPageComponent} from './components/not-found-page/not-found-page.component';
 import {AuthServiceConfig, FacebookLoginProvider, GoogleLoginProvider, SocialLoginModule} from 'angularx-social-login';
+import { AboutUsPageComponent } from './components/about-us-page/about-us-page.component';
+import { SrilaPrabhupadaPageComponent } from './components/srila-prabhupada-page/srila-prabhupada-page.component';
+import { AboutIskconPageComponent } from './components/about-iskcon-page/about-iskcon-page.component';
+import { ActivitiesPageComponent } from './components/activities-page/activities-page.component';
+import {SafePipe} from './pipes/SafePipe';
 
 const primeNgModules = [
   AccordionModule,
@@ -118,7 +123,12 @@ export function provideConfig() {
     BreadCrumbComponent,
     ExpertsSectionComponent,
     NotFoundPageComponent,
-    BreadCrumbComponent
+    BreadCrumbComponent,
+    AboutUsPageComponent,
+    SrilaPrabhupadaPageComponent,
+    AboutIskconPageComponent,
+    ActivitiesPageComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,
@@ -131,7 +141,8 @@ export function provideConfig() {
     NgxUsefulSwiperModule,
     HttpClientModule,
     CarouselModule,
-    SocialLoginModule
+    SocialLoginModule,
+    AutoCompleteModule,
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, {
     provide: AuthServiceConfig,

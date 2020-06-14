@@ -1,1 +1,131 @@
-<p>register works!</p>
+<app-bread-crumb componentName="Sign Up"></app-bread-crumb>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <form class="register-form" [formGroup]="registerForm" (ngSubmit)="signUpPerson()">
+        <div class="input-container">
+          <input
+            placeholder="Full Name"
+            type="text"
+            formControlName="fullName"
+            pInputText
+          />
+          <p-message
+            severity="error"
+            text="Name is required"
+            *ngIf="!registerForm.controls['fullName'].valid&&registerForm.controls['fullName'].dirty">
+          </p-message>
+        </div>
+        <div class="input-container">
+          <input
+            placeholder="Email"
+            type="text"
+            formControlName="email"
+            pInputText
+          />
+          <p-message
+            severity="error"
+            text="Email is required"
+            *ngIf="!registerForm.controls['email'].valid&&registerForm.controls['email'].dirty">
+          </p-message>
+        </div>
+        <div class="input-container">
+          <input
+            placeholder="Password"
+            type="password"
+            formControlName="password"
+            pInputText
+          />
+          <p-message
+            severity="error"
+            text="Password is required"
+            *ngIf="!registerForm.controls['password'].valid&&registerForm.controls['password'].dirty">
+          </p-message>
+        </div>
+        <div class="input-container">
+          <input
+            placeholder="Confirm Password"
+            type="password"
+            formControlName="confirmPassword"
+            pInputText
+          />
+          <p-message
+            severity="error"
+            text="Confirm Password is required"
+            *ngIf="!registerForm.controls['confirmPassword'].valid&&registerForm.controls['confirmPassword'].dirty">
+          </p-message>
+          <p-message
+            severity="error"
+            text="Password Mismatch"
+            *ngIf="registerForm.get('confirmPassword').value!==registerForm.get('password').value">
+          </p-message>
+        </div>
+        <div class="input-container">
+          <input
+            placeholder="Contact"
+            type="text"
+            formControlName="contact"
+            pInputText
+          />
+          <p-message
+            severity="error"
+            text="Contact info is required"
+            *ngIf="!registerForm.controls['contact'].valid&&registerForm.controls['contact'].dirty">
+          </p-message>
+        </div>
+        <div class="input-container">
+          <p-dropdown [options]="genders"
+                      formControlName="gender"></p-dropdown>
+          <p-message
+            severity="error"
+            text="Gender is required"
+            *ngIf="!registerForm.controls['gender'].valid&&registerForm.controls['gender'].dirty">
+          </p-message>
+        </div>
+        <div class="input-container">
+          <p-autoComplete
+            placeholder="College"
+            formControlName="college"
+            [suggestions]="filteredCollege"
+            (completeMethod)="searchCollege($event)"
+            [dropdown]="true"></p-autoComplete>
+          <p-message
+            severity="error"
+            text="College is required"
+            *ngIf="!registerForm.controls['college'].valid&&registerForm.controls['college'].dirty">
+          </p-message>
+        </div>
+        <div class="input-container">
+          <input
+            placeholder="Profession"
+            type="text"
+            formControlName="profession"
+            pInputText
+          />
+          <p-message
+            severity="error"
+            text="Profession is required"
+            *ngIf="!registerForm.controls['profession'].valid&&registerForm.controls['profession'].dirty">
+          </p-message>
+        </div>
+        <div class="input-container">
+          <input
+            placeholder="Area of Residence"
+            type="text"
+            formControlName="areaOfResidence"
+            pInputText
+          />
+          <p-message
+            severity="error"
+            text="Area of Residence is required"
+            *ngIf="!registerForm.controls['areaOfResidence'].valid&&registerForm.controls['areaOfResidence'].dirty">
+          </p-message>
+        </div>
+        <div class="input-container">
+          <button pButton type="submit" label="Submit"
+                  [disabled]="!registerForm.valid || registerForm.get('confirmPassword').value!==registerForm.get('password').value"></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,22 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { AppUrl } from '../../constants/app-url';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-activities-page',
+  templateUrl: './activities-page.component.html',
+  styleUrls: ['./activities-page.component.scss']
 })
-export class HomeComponent implements OnInit {
-  appUrl = AppUrl;
-
+export class ActivitiesPageComponent implements OnInit {
   activities = [{
     name: 'CAMPS',
     image: 'https://iyfdelhi.com/wp-content/uploads/2013/06/Nature-51.jpg',
+    description: 'These excursions and retreats are blend of educational thought provoking discussions ' +
+      'and joyful experience of connecting with nature',
     action_btn: 'KNOW MORE',
     action_btn_link: '',
   }, {
     name: 'SCHOOL PROGRAMS',
     image: 'https://iyfdelhi.com/wp-content/uploads/2013/06/kids-leaving-schoolpbr.jpg',
+    description: '',
     action_btn: 'KNOW MORE',
     action_btn_link: '',
   }, {
@@ -31,7 +31,8 @@ export class HomeComponent implements OnInit {
     action_btn_link: '',
   }];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

@@ -1,0 +1,17 @@
+.register-form {
+  margin: 30px auto;
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 600px;
+  width: 95%;
+  .input-container{
+    width: 100%;
+    padding: 6px;
+    margin: 6px 0;
+    & > input {
+      width: 100%;
+    }
+  }
+}
