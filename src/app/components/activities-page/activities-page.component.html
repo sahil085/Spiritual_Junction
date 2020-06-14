@@ -1,0 +1,32 @@
+<app-bread-crumb componentName="Our Activities"></app-bread-crumb>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <app-promo-video-section
+        [text]="'ISKCON Youth Forum offers a nourishing package of lifestyle management to keep the body and soul in good shape\n'+
+'          and provides a meaningful purpose to students\' academic pursuits. Inevitably, the younger generation blossoms to\n'+
+'          become an asset to the society.'"
+        [videoLink]="'https://www.youtube.com/embed/UjoXAdeUYYs'"
+      ></app-promo-video-section>
+      <!--Activities section-->
+      <div class="section-container activity-section">
+        <ul class="activity-list">
+          <li *ngFor="let activity of activities" class="activity-card">
+            <div class="image-wrapper">
+              <img src="{{activity.image}}" alt="{{activity.name}}"/>
+              <div class="text-content">
+                <span class="activity-name">{{activity.name}}</span>
+                <button class="round-btn">
+                  <a routerLink="{{activity.action_btn_link}}">
+                    {{activity.action_btn}}
+                  </a>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+

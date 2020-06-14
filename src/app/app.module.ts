@@ -55,6 +55,8 @@ import {NotFoundPageComponent} from './components/not-found-page/not-found-page.
 import { AboutUsPageComponent } from './components/about-us-page/about-us-page.component';
 import { SrilaPrabhupadaPageComponent } from './components/srila-prabhupada-page/srila-prabhupada-page.component';
 import { AboutIskconPageComponent } from './components/about-iskcon-page/about-iskcon-page.component';
+import { ActivitiesPageComponent } from './components/activities-page/activities-page.component';
+import {SafePipe} from './pipes/SafePipe';
 
 const primeNgModules = [
   AccordionModule,
@@ -108,7 +110,9 @@ const primeNgModules = [
     BreadCrumbComponent,
     AboutUsPageComponent,
     SrilaPrabhupadaPageComponent,
-    AboutIskconPageComponent
+    AboutIskconPageComponent,
+    ActivitiesPageComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,

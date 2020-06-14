@@ -9,6 +9,7 @@ import {AppUrl} from './constants/app-url';
 import {AboutUsPageComponent} from './components/about-us-page/about-us-page.component';
 import {SrilaPrabhupadaPageComponent} from './components/srila-prabhupada-page/srila-prabhupada-page.component';
 import {AboutIskconPageComponent} from './components/about-iskcon-page/about-iskcon-page.component';
+import {ActivitiesPageComponent} from './components/activities-page/activities-page.component';
 
 
 const routes: Routes = [{
@@ -32,6 +33,9 @@ const routes: Routes = [{
 }, {
   path: AppUrl.ISKCON,
   component: AboutIskconPageComponent,
+}, {
+  path: AppUrl.ACTIVITIES,
+  component: ActivitiesPageComponent,
 }, {
   path: AppUrl.NOT_FOUND,
   component: NotFoundPageComponent
