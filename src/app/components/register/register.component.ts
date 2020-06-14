@@ -37,7 +37,11 @@ export class RegisterComponent implements OnInit {
   }
 
   signUpPerson() {
-    console.log('value', this.registerForm.value);
+    const {
+      confirmPassword,
+      ...signUpData
+    } = this.registerForm.value;
+    console.log(signUpData);
   }
 
   searchCollege(event) {

@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {AuthenticationService} from '../../services/security/authentication.service';
 import {AuthService, FacebookLoginProvider, GoogleLoginProvider, SocialUser} from 'angularx-social-login';
 import {SocialLogin} from '../../models/social-login';
+import {AppUrl} from 'src/app/constants/app-url';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   email: string;
   password: string;
-
+  AppUrl = AppUrl;
 
   constructor(private router: Router, private route: ActivatedRoute,
               private appAuthService: AuthenticationService, private authService: AuthService) {

@@ -7,7 +7,7 @@ import { AppUrl } from '../../constants/app-url';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  appUrl = AppUrl;
+  AppUrl = AppUrl;
 
   activities = [{
     name: 'CAMPS',

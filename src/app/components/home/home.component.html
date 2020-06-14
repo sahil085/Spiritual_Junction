@@ -3,7 +3,7 @@
   [text]="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'"
   [title]="'Courses that transform life!'"
   [videoLink]="'https://www.youtube.com/embed/7gvGGEzZnbQ'"
-  [actionBtnLink]="appUrl.ACTIVITIES"
+  [actionBtnLink]="AppUrl.ACTIVITIES"
 ></app-promo-video-section>
 <app-features-section></app-features-section>
 <app-experts-section></app-experts-section>
@@ -32,6 +32,11 @@
 
 <!--Call to Action-->
 <div class="call-to-action">
-  <div class="message">So what are you waiting for?</div>
-  <button class="round-btn">GET CONNECTED</button>
+  <div class="message-title">So what are you waiting for?</div>
+  <div class="message-content">
+    Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+    graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to
+    have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.
+  </div>
+  <button class="round-btn"><a [routerLink]="AppUrl.REGISTER">GET CONNECTED</a></button>
 </div>
