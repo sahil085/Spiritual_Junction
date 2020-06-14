@@ -58,6 +58,8 @@ import { SrilaPrabhupadaPageComponent } from './components/srila-prabhupada-page
 import { AboutIskconPageComponent } from './components/about-iskcon-page/about-iskcon-page.component';
 import { ActivitiesPageComponent } from './components/activities-page/activities-page.component';
 import {SafePipe} from './pipes/SafePipe';
+import { FestivalsPageComponent } from './components/festivals-page/festivals-page.component';
+import { ViplavaPageComponent } from './components/viplava-page/viplava-page.component';
 
 const primeNgModules = [
   AccordionModule,
@@ -129,6 +131,8 @@ export function provideConfig() {
     AboutIskconPageComponent,
     ActivitiesPageComponent,
     SafePipe,
+    FestivalsPageComponent,
+    ViplavaPageComponent,
   ],
   imports: [
     BrowserModule,

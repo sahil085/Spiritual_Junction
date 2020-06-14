@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {AppUrl} from '../../constants/app-url';
 
 @Component({
   selector: 'app-features-section',
@@ -28,7 +29,7 @@ export class FeaturesSectionComponent implements OnInit {
     title: 'Festivals that nourish the soul',
     description: 'Who doesn\'t likes festivals? Here in IYF, we offer not just the food or music, we share the bliss, the real happiness everyone is searchig for. What are you waiting for? Connect with us and see every day as a festival.',
     action_btn_text: 'Learn More',
-    action_btn_link: '/',
+    action_btn_link: `/${AppUrl.FESTIVALS}`,
     image: 'https://iyfdelhi.com/wp-content/uploads/2013/06/shutterstock_612941954.jpg',
   }];
 

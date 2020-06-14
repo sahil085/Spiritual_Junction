@@ -18,42 +18,43 @@ Fixed Navigation
 
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav ml-auto text-center">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="AppUrl.HOME_PAGE">
               HOME
             </a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="ActivitiesDropdown" role="button" data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">
-              Activities
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" [routerLink]="AppUrl.ACTIVITIES">Our Activities</a>
-              <a class="dropdown-item" [routerLink]="AppUrl.FESTIVALS">Youth Fest</a>
-              <a class="dropdown-item" [routerLink]="AppUrl.CAMPS">Camps</a>
-              <a class="dropdown-item" [routerLink]="AppUrl.SCHOOL_PROGRAMS">School Programs</a>
-              <a class="dropdown-item" [routerLink]="AppUrl.COLLEGE_PROGRAMS">College Programs</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="EAndTDropdown" role="button" data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">
-              Education & Training
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" [routerLink]="AppUrl.VEDIC_COURSES">Vedic Courses</a>
-              <a class="dropdown-item" [routerLink]="AppUrl.COUNSELLING">Personal Mentors</a>
-            </div>
-          </li>
+<!--          <li class="nav-item dropdown">-->
+<!--            <a class="nav-link dropdown-toggle" href="#" id="ActivitiesDropdown" role="button" data-toggle="dropdown"-->
+<!--               aria-haspopup="true" aria-expanded="false">-->
+<!--              Activities-->
+<!--            </a>-->
+<!--            <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--              <a class="dropdown-item" [routerLink]="AppUrl.ACTIVITIES">Our Activities</a>-->
+<!--              <a class="dropdown-item" [routerLink]="AppUrl.FESTIVALS">Youth Fest</a>-->
+<!--              <a class="dropdown-item" [routerLink]="AppUrl.CAMPS">Camps</a>-->
+<!--              <a class="dropdown-item" [routerLink]="AppUrl.SCHOOL_PROGRAMS">School Programs</a>-->
+<!--              <a class="dropdown-item" [routerLink]="AppUrl.COLLEGE_PROGRAMS">College Programs</a>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="nav-item dropdown">-->
+<!--            <a class="nav-link dropdown-toggle" href="#" id="EAndTDropdown" role="button" data-toggle="dropdown"-->
+<!--               aria-haspopup="true" aria-expanded="false">-->
+<!--              Education & Training-->
+<!--            </a>-->
+<!--            <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--              <a class="dropdown-item" [routerLink]="AppUrl.VEDIC_COURSES">Vedic Courses</a>-->
+<!--              <a class="dropdown-item" [routerLink]="AppUrl.COUNSELLING">Personal Mentors</a>-->
+<!--            </div>-->
+<!--          </li>-->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="festivalsDropdown" role="button" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
               Festivals
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" [routerLink]="AppUrl.FESTIVALS">YOUTH FESTS</a>
               <a class="dropdown-item" href="https://udgaar.in" target="_blank">UDGAAR 2019</a>
-              <a class="dropdown-item" [routerLink]="AppUrl.FESTIVALS">Vipalava</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.VIPLAVA">Viplava</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -67,16 +68,16 @@ Fixed Navigation
               <a class="dropdown-item" [routerLink]="AppUrl.ABOUT_US">About US</a>
             </div>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="contactUsDropdown" role="button" data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">
-              Contact US
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" [routerLink]="AppUrl.FAQ">F.A.Q.</a>
-              <a class="dropdown-item" [routerLink]="AppUrl.CONTACT_US">Contact US</a>
-            </div>
-          </li>
+<!--          <li class="nav-item dropdown">-->
+<!--            <a class="nav-link dropdown-toggle" href="#" id="contactUsDropdown" role="button" data-toggle="dropdown"-->
+<!--               aria-haspopup="true" aria-expanded="false">-->
+<!--              Contact US-->
+<!--            </a>-->
+<!--            <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--              <a class="dropdown-item" [routerLink]="AppUrl.FAQ">F.A.Q.</a>-->
+<!--              <a class="dropdown-item" [routerLink]="AppUrl.CONTACT_US">Contact US</a>-->
+<!--            </div>-->
+<!--          </li>-->
           <li class="nav-item">
             <a [routerLink]="AppUrl.LOGIN" class="nav-link btn btn-transparent"> Login </a>
           </li>

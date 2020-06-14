@@ -428,6 +428,7 @@ a:focus, a:hover {
 .navigation .navbar-light .navbar-nav .nav-item .nav-link:hover, .navigation .navbar-light .navbar-nav .nav-item .nav-link:active, .navigation .navbar-light .navbar-nav .nav-item .nav-link:focus {
   background: none;
   color: #28ABE3;
+  border-color: #28ABE3;
 }
 
 .navigation .navbar-light .navbar-nav .nav-item.active .nav-link {

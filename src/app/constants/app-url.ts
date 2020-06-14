@@ -1,5 +1,4 @@
 export class AppUrl {
-  public static PAGE_PREFIX = 'page/';
   public static HOME_PAGE = '';
 
   public static LOGIN = 'login';
@@ -14,6 +13,7 @@ export class AppUrl {
   public static VEDIC_COURSES = 'vedic-courses';
   public static COUNSELLING = 'counselling';
   public static FESTIVALS = 'festivals';
+  public static VIPLAVA = 'viplava';
   public static SRILA_PRABHUPADA = 'srila-prabhupada';
   public static ISKCON = 'iskcon';
   public static ABOUT_US = 'about-us';

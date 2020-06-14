@@ -1,15 +1,17 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {AppUrl} from './constants/app-url';
 import {AccessDeniedComponent} from './components/access-denied/access-denied.component';
 import {RegisterComponent} from './components/register/register.component';
 import {LoginComponent} from './components/login/login.component';
 import {HomeComponent} from './components/home/home.component';
 import {NotFoundPageComponent} from './components/not-found-page/not-found-page.component';
-import {AppUrl} from './constants/app-url';
 import {AboutUsPageComponent} from './components/about-us-page/about-us-page.component';
 import {SrilaPrabhupadaPageComponent} from './components/srila-prabhupada-page/srila-prabhupada-page.component';
 import {AboutIskconPageComponent} from './components/about-iskcon-page/about-iskcon-page.component';
 import {ActivitiesPageComponent} from './components/activities-page/activities-page.component';
+import {FestivalsPageComponent} from './components/festivals-page/festivals-page.component';
+import {ViplavaPageComponent} from './components/viplava-page/viplava-page.component';
 
 
 const routes: Routes = [{
@@ -36,6 +38,12 @@ const routes: Routes = [{
 }, {
   path: AppUrl.ACTIVITIES,
   component: ActivitiesPageComponent,
+}, {
+  path: AppUrl.FESTIVALS,
+  component: FestivalsPageComponent,
+}, {
+  path: AppUrl.VIPLAVA,
+  component: ViplavaPageComponent,
 }, {
   path: AppUrl.NOT_FOUND,
   component: NotFoundPageComponent
