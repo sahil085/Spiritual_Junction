@@ -25,7 +25,7 @@ export class AuthenticationService {
 
 
   authenticate(username, password) {
-    return this.httpClient.post<UserAuthority>(`${this.apiUrl}/authenticate`, {username, password}).pipe(
+    return this.httpClient.post<UserAuthority>(`${this.apiUrl}/authenticate`, {username, password}, {headers: {skip: 'true'}}).pipe(
       map(
         userData => {
           const userAuth = new UserAuthority();
@@ -36,8 +36,22 @@ export class AuthenticationService {
           return userAuth;
         }
       ),
-
     );
+  }
+
+  setAuthDetailsInCookie(user: UserAuthority) {
+    this.cookieService.set(AppConst.AUTH_USER_COOKIE_, JSON.stringify(user));
+  }
+
+  clearCookie() {
+    this.cookieService.delete(AppConst.AUTH_USER_COOKIE_);
+    this.cookieService.delete(AppConst.AUTH_COOKIE_SUFFIX);
+  }
+
+  getAuthUserDetailsFromCookie(): UserAuthority {
+    if (this.cookieService.get(AppConst.AUTH_USER_COOKIE_)) {
+      return JSON.parse(this.cookieService.get(AppConst.AUTH_USER_COOKIE_));
+    }
   }
 
   getAuthToken(): string {
@@ -64,8 +78,8 @@ export class AuthenticationService {
   logout() {
     // remove social login
     this.authService.signOut();
-    // remove oauth cookie from backend
-    this.httpClient.get(this.apiUrl).subscribe();
+    this.clearCookie();
+    this.httpClient.get(`${this.apiUrl}/${AppUrl.LOGOUT}`, {headers: {skip: 'true'}}).subscribe();
     AppScope.setCurrentUser(null);
     this.router.navigateByUrl(AppUrl.LOGIN);
   }

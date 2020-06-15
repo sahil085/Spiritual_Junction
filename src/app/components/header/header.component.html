@@ -85,6 +85,10 @@ Fixed Navigation
             <a [routerLink]="AppUrl.REGISTER" class="nav-link btn btn-transparent" style="margin-left: 10px"> Register </a>
           </li>
 
+          <a routerLink="login" *ngIf="!currentUser" class="btn btn-transparent customBtn"> Login </a>
+          <a  (click)="logoutUser()" *ngIf="currentUser" class="btn btn-transparent customBtn"> Logout </a>
+          <button class="btn btn-transparent customBtn" style="margin-left: 10px"> Register </button>
+
         </ul>
       </div>
     </nav>
