@@ -1,0 +1,22 @@
+$black: #000000;
+$lightBlack: #161616;
+$gray: #ECECEC;
+$lightWhite: #FDFCFA;
+$white: #FFFFFF;
+$atoll: #0F6674;
+$darkAtoll: #09434C;
+$lightAtoll: #138799;
+
+
+$desktop-min-width: 880px;
+$desktop-max-width: 1050px;
+$desktop-header-height: 80px;
+$tablet-header-height: 70px;
+$mobile-header-height: 60px;
+$desktop-column-margin: 12px;
+$desktop-column-width: ($desktop-max-width + ($desktop-column-margin * 2)) / 3 - $desktop-column-margin * 2;
+
+$primaryFontRegular: 'GT America';
+$primaryFontCondensed: 'GT America Condensed';
+$primaryFontMono: 'GT America Mono';
+$secondaryFontRegular: 'New York Large';

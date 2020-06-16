@@ -14,15 +14,14 @@
           <li *ngFor="let activity of activities" class="activity-card">
             <div class="image-wrapper">
               <img src="{{activity.image}}" alt="{{activity.name}}"/>
-              <div class="text-content">
-                <span class="activity-name">{{activity.name}}</span>
-                <button class="round-btn">
-                  <a routerLink="{{activity.action_btn_link}}">
-                    {{activity.action_btn}}
-                  </a>
-                </button>
-              </div>
             </div>
+            <span class="activity-name">{{activity.name}}</span>
+            <span class="activity-desc">{{activity.description}}</span>
+            <button class="round-btn">
+              <a routerLink="{{activity.action_btn_link}}">
+                {{activity.action_btn}}
+              </a>
+            </button>
           </li>
         </ul>
       </div>

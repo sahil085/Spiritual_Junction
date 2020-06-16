@@ -1,9 +1,11 @@
+@import "src/constants.scss";
+
 .content-wrapper {
   width: 100%;
   padding-top: 200px;
   padding-bottom: 20px;
   letter-spacing: 3px;
-  background-color: #0f6674;
+  background-color: $atoll;
   color: white;
   font-size: 40px;
 }
