@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 $black: #000000;
 $lightBlack: #161616;
 $gray: #ECECEC;
@@ -16,7 +17,7 @@ $mobile-header-height: 60px;
 $desktop-column-margin: 12px;
 $desktop-column-width: ($desktop-max-width + ($desktop-column-margin * 2)) / 3 - $desktop-column-margin * 2;
 
-$primaryFontRegular: 'GT America';
+$primaryFontRegular: 'Montserrat';
 $primaryFontCondensed: 'GT America Condensed';
 $primaryFontMono: 'GT America Mono';
 $secondaryFontRegular: 'New York Large';

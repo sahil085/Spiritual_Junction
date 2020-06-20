@@ -1,3 +1,5 @@
+@import "src/constants.scss";
+
 .expert-header {
   font-size: 32px;
   text-align: center;
@@ -5,7 +7,7 @@
 }
 
 .expert-card {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $primaryFontRegular, sans-serif;
 }
 
 .expert-section .img-wrapper {

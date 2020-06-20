@@ -2,6 +2,10 @@
 @import "src/mixins.scss";
 @import "src/constants.scss";
 
+body, p {
+  font-family: $primaryFontRegular, sans-serif;
+}
+
 .validation-error {
   color: orangered
 }
