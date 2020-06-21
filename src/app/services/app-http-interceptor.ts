@@ -33,9 +33,9 @@ export class AppHttpInterceptor implements HttpInterceptor {
       catchError((err: any) => {
         if (err instanceof HttpErrorResponse) {
           try {
-            this.messageService.add({severity: 'error', summary: 'Service Message', detail: 'Error Via MessageService'});
+            this.messageService.add({severity: 'error', summary: 'Service Message', detail: err.message});
           } catch (e) {
-            this.messageService.add({severity: 'error', summary: 'Service Message', detail: 'Error Via MessageService'});
+            this.messageService.add({severity: 'error', summary: 'Service Message', detail: e.message});
           }
           // log error
         }
