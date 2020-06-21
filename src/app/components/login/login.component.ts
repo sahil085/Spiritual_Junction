@@ -5,11 +5,13 @@ import {AuthService, FacebookLoginProvider, GoogleLoginProvider, SocialUser} fro
 import {SocialLogin} from '../../models/social-login';
 import {AppUrl} from 'src/app/constants/app-url';
 import {AppScope} from '../../constants/app-scope';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  providers: [MessageService],
 })
 export class LoginComponent implements OnInit {
 

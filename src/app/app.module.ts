@@ -19,7 +19,7 @@ import {
   InputTextModule,
   KeyFilterModule,
   MenuModule,
-  MessageModule,
+  MessageModule, MessageService,
   MultiSelectModule,
   OverlayPanelModule,
   PanelModule,
@@ -30,6 +30,7 @@ import {
   TableModule,
   TabViewModule,
   TieredMenuModule,
+  ToastModule,
   ToggleButtonModule,
   ToolbarModule,
   TooltipModule
@@ -62,6 +63,8 @@ import { FestivalsPageComponent } from './components/festivals-page/festivals-pa
 import { ViplavaPageComponent } from './components/viplava-page/viplava-page.component';
 import {ServiceLocator} from './models/service-locator';
 import {AuthHttpInterceptorService} from './services/security/auth-http-interceptor.service';
+import { AppHttpInterceptor } from './services/app-http-interceptor';
+import {ToastrService} from 'ngx-toastr';
 
 const primeNgModules = [
   AccordionModule,
@@ -89,6 +92,7 @@ const primeNgModules = [
   TableModule,
   TabViewModule,
   TieredMenuModule,
+  ToastModule,
   ToggleButtonModule,
   ToolbarModule,
   TooltipModule,
@@ -153,7 +157,9 @@ export function provideConfig() {
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     {provide: AuthServiceConfig, useFactory: provideConfig},
-    {provide: HTTP_INTERCEPTORS, useClass: AuthHttpInterceptorService, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: AuthHttpInterceptorService, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: AppHttpInterceptor, multi: true},
+    MessageService,
   ],
   bootstrap: [AppComponent]
 })
