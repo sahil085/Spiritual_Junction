@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,700|Source+Sans+Pro:400,600");
+
 body {
   line-height: 1.4;
   font-family: "Source Sans Pro", sans-serif;
@@ -409,6 +410,7 @@ a:focus, a:hover {
 ==================================================================*/
 .navigation {
   transition: .3s all;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .navigation .logo-default {
@@ -445,7 +447,7 @@ a:focus, a:hover {
   visibility: visible;
   opacity: 1;
   -webkit-transform: scaleY(1);
-          transform: scaleY(1);
+  transform: scaleY(1);
 }
 
 .navigation .dropdown-menu {
@@ -458,9 +460,9 @@ a:focus, a:hover {
   transition: .3s ease;
   opacity: 0;
   -webkit-transform: scaleY(0);
-          transform: scaleY(0);
+  transform: scaleY(0);
   -webkit-transform-origin: top;
-          transform-origin: top;
+  transform-origin: top;
   background: #000;
 }
 
@@ -470,9 +472,9 @@ a:focus, a:hover {
     opacity: 1;
     visibility: visible;
     -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    transform: scaleY(1);
     -webkit-transform-origin: unset;
-            transform-origin: unset;
+    transform-origin: unset;
     text-align: center;
   }
 }
@@ -481,7 +483,7 @@ a:focus, a:hover {
   visibility: visible;
   opacity: 1;
   -webkit-transform: scaleY(1);
-          transform: scaleY(1);
+  transform: scaleY(1);
 }
 
 @media (max-width: 991px) {
@@ -507,15 +509,19 @@ a:focus, a:hover {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.06);
     background: #fff;
   }
+
   .navigation .navbar-light .navbar-nav .nav-item .nav-link {
     color: #000;
   }
+
   .navigation .logo-white {
     display: none;
   }
+
   .navigation .logo-default {
     display: block;
   }
+
   .navigation .navbar-light .navbar-toggler {
     color: rgba(0, 0, 0, 0.5);
     border-color: rgba(0, 0, 0, 0.1);
@@ -655,7 +661,7 @@ a:focus, a:hover {
   right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .slider-item h1 {
@@ -706,7 +712,7 @@ a:focus, a:hover {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   z-index: 9;
   height: 70px;
   width: 70px;
@@ -727,7 +733,7 @@ a:focus, a:hover {
   background: transparent;
   top: 50%;
   -webkit-transform: translateY(-50%) rotate(-45deg);
-          transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(-50%) rotate(-45deg);
   transition: .2s ease;
 }
 
@@ -738,7 +744,7 @@ a:focus, a:hover {
   width: 25px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   background: #fff;
   transition: .2s ease;
 }
@@ -1192,7 +1198,7 @@ a:focus, a:hover {
   left: 50%;
   opacity: 0;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 9;
   transition: all 0.3s ease-in-out;
   text-align: center;
@@ -2079,41 +2085,52 @@ a:focus, a:hover {
   .parallax-section {
     background-position: center top !important;
   }
+
   /* home slider */
   #slitSlider .carousel-caption h2 {
     font-size: 60px;
   }
+
   /* about us */
   .feature-desc h3 {
     margin-top: 0;
   }
+
   /* our team */
   .team-mate {
     margin-bottom: 30px;
   }
+
   .mask ul {
     top: 85px;
   }
+
   .mask ul li {
     margin: 0 5px;
   }
+
   .team-mate > h4 {
     margin-bottom: 10px;
   }
+
   .team-mate img {
     margin: 0 auto;
   }
+
   .member-info ul li {
     margin-right: 10px;
   }
+
   /* testimonial */
   .client-info {
     width: 55%;
   }
+
   /* blog page */
   .tab-post-nav li a {
     padding: 15px 8px;
   }
+
   /* single blog page */
   .author-bio h5 {
     margin-left: 70px;
@@ -2127,63 +2144,78 @@ a:focus, a:hover {
   .counters-item:before {
     display: none;
   }
+
   /* parallax section */
   .parallax-section {
     background-position: center top !important;
   }
+
   /* navigation */
   .navbar-inverse .navbar-nav li a {
     padding: 20px 10px;
   }
+
   /* about us */
   .wrap-about {
     margin: 0 0 75px;
   }
+
   .about-content {
     margin: 0 auto;
     width: 60%;
   }
+
   /* fun facts */
   #counter {
     padding-bottom: 50px;
   }
+
   .counters-item {
     margin-bottom: 30px;
   }
+
   /* our team */
   .team-mate {
     margin: 0 auto 30px;
     width: 280px;
   }
+
   /* our skills */
   .skill-chart {
     margin: 0 auto 40px;
     width: 300px;
   }
+
   .skill-chart {
     margin: 0 auto 40px;
     width: 90%;
   }
+
   .skill-chart > h3 {
     margin: 15px 0;
   }
+
   /* pricing table */
   .pricing {
     margin: 0 auto 30px;
     width: 300px;
   }
+
   /* testimonial */
   .client-info {
     width: 75%;
   }
+
   /* latest posts */
   .note {
     margin-bottom: 30px;
   }
+
   /* blog page */
   .tab-post-nav li a {
     padding: 10px;
   }
+
   /* singla blog page */
   .author-social {
     margin-left: 0;
@@ -2197,136 +2229,171 @@ a:focus, a:hover {
   .counters-item:before {
     display: none;
   }
+
   .clients-logo-slider {
     text-align: center;
   }
+
   /* parallax section */
   .parallax-section {
     background-position: center top !important;
   }
+
   /* h1 font size home slider */
   h1 {
     font-size: 30px;
   }
+
   .carousel-caption img {
     width: 70%;
   }
+
   #slitSlider .carousel-caption h2 {
     font-size: 24px;
     letter-spacing: 0.5px;
     line-height: 35px;
     margin-bottom: 25px;
   }
+
   #slitSlider .carousel-caption h3 {
     font-size: 20px;
     letter-spacing: 0.5px;
     line-height: 28px;
     margin-bottom: 25px;
   }
+
   #slitSlider .carousel-caption a {
     font-size: 14px;
   }
+
   .wrap-about {
     margin: 0 auto 80px;
     width: 85%;
   }
+
   .feature-desc a {
     margin: 5px 5px 5px 0;
   }
+
   /* fun facts */
   /* services */
   #services .title {
     padding-bottom: 60px;
   }
+
   /* our skills */
   .skill-chart {
     margin: 0 auto 40px;
     width: 280px;
   }
+
   /* our team */
   .team-mate {
     margin: 0 auto 31px;
     width: 280px;
   }
+
   .team-mate img {
     margin: 0 auto;
   }
+
   .member-info ul {
     text-align: center;
     margin-bottom: 10px;
   }
+
   /* pricing table */
   .pricing {
     margin: 0 auto 20px;
     width: 280px;
   }
+
   /* portfolio */
   .portfolio-filter ul li a {
     margin: 0 10px 10px 0;
     padding: 5px 10px;
   }
+
   /* testimonials */
   .sub-title h3 {
     font-size: 18px;
   }
+
   .client-info {
     width: 100%;
   }
+
   /* latest posts */
   #blog {
     padding-bottom: 0;
   }
+
   .note {
     margin-bottom: 30px;
   }
+
   .note .excerpt {
     padding: 0 20px 20px;
   }
+
   .all-post {
     margin: 20px 0 30px;
   }
+
   /* contact */
   .contact-info {
     margin: 0 0 30px;
   }
+
   #map-canvas {
     height: 250px;
   }
+
   /* footer */
   .social-icon ul li, .social-icon ul li:first-child {
     margin: 15px;
   }
+
   .social-icon ul li a {
     width: 50px;
     height: 50px;
   }
+
   .social-icon ul li a i {
     font-size: 24px;
     line-height: 50px;
   }
+
   .blog-title h1 {
     font-size: 28px;
   }
+
   /* blog page */
   #blog-page {
     margin: 0;
   }
+
   #blog-posts {
     margin: 0 0 40px;
   }
+
   .post-excerpt h3 {
     font-size: 20px;
   }
+
   .post-pagination ul li {
     margin: 0 10px 10px 0;
   }
+
   .tab-post-nav li a {
     padding: 8px 5px;
   }
+
   /* single blog page */
   .author-social {
     margin-left: 0;
   }
+
   .author-avatar {
     margin-right: 10px;
   }
@@ -2339,52 +2406,64 @@ a:focus, a:hover {
   .title h2 {
     font-size: 32px;
   }
+
   .counter .counter-title h2 {
     font-size: 35px;
   }
+
   /* about us */
   .wrap-about {
     margin: 0 auto 75px;
     width: 70%;
   }
+
   /* our team */
   .team-mate {
     margin: 0 auto 30px;
     width: 280px;
   }
+
   .team-mate img {
     margin: 0 auto;
   }
+
   /* portfolio */
   .og-grid li {
     width: 245px;
   }
+
   /* skills */
   .skill-chart {
     margin: 0 auto 40px;
     width: 300px;
   }
+
   /* pricing table */
   .pricing {
     margin: 0 auto 30px;
     width: 350px;
   }
+
   /* testimonials */
   .client-info {
     width: 74%;
   }
+
   /* latest posts */
   #blog {
     padding-bottom: 0;
   }
+
   .note {
     margin: 0 auto 30px;
     width: 75%;
   }
+
   /* contact */
   .contact-info {
     width: 100%;
   }
+
   /* blog page */
   .tab-post-nav li a {
     padding: 10px 15px;

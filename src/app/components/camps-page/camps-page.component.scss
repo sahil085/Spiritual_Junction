@@ -1,0 +1,51 @@
+.image-wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  & > img {
+    width: 100%;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  line-height: 140%;
+  & > div {
+    flex-basis: 46%;
+  }
+  & > .camp-testimonial {
+    & > .title {
+      background: #f4c69c;
+      text-align: right;
+      text-transform: uppercase;
+      padding: 1rem 1rem 1.5rem 0;
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    & > .quote-text {
+      text-align: justify;
+    }
+    & > .author {
+      text-align: right;
+      color: #FF0000;
+      font-style: italic;
+    }
+  }
+  & > .features {
+    & > .feature {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      & > .icon-wrapper {
+        width: 80px;
+        min-width: 80px;
+        max-width: 80px;
+        margin-right: 20px;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -12,7 +12,7 @@ export class BannerComponent implements OnInit {
   config: SwiperOptions = {
     pagination: { el: '.swiper-pagination', clickable: true },
     allowTouchMove: true,
-    autoHeight: true,
+    autoHeight: false,
     autoplay: {
       delay: 3000,
       disableOnInteraction: true

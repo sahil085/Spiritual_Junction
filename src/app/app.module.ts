@@ -65,6 +65,10 @@ import {ServiceLocator} from './models/service-locator';
 import {AuthHttpInterceptorService} from './services/security/auth-http-interceptor.service';
 import { AppHttpInterceptor } from './services/app-http-interceptor';
 import {ToastrService} from 'ngx-toastr';
+import { CampsPageComponent } from './components/camps-page/camps-page.component';
+import { SchoolsPageComponent } from './components/schools-page/schools-page.component';
+import { CounsellingPageComponent } from './components/counselling-page/counselling-page.component';
+import { ContactPageComponent } from './components/contact-page/contact-page.component';
 
 const primeNgModules = [
   AccordionModule,
@@ -139,6 +143,10 @@ export function provideConfig() {
     SafePipe,
     FestivalsPageComponent,
     ViplavaPageComponent,
+    CampsPageComponent,
+    SchoolsPageComponent,
+    CounsellingPageComponent,
+    ContactPageComponent,
   ],
   imports: [
     BrowserModule,

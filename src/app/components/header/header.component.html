@@ -18,43 +18,37 @@ Fixed Navigation
 
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav ml-auto text-center">
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="AppUrl.HOME_PAGE">
-              HOME
-            </a>
-          </li>
-<!--          <li class="nav-item dropdown">-->
-<!--            <a class="nav-link dropdown-toggle" href="#" id="ActivitiesDropdown" role="button" data-toggle="dropdown"-->
-<!--               aria-haspopup="true" aria-expanded="false">-->
-<!--              Activities-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" [routerLink]="AppUrl.HOME_PAGE">-->
+<!--              HOME-->
 <!--            </a>-->
-<!--            <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-<!--              <a class="dropdown-item" [routerLink]="AppUrl.ACTIVITIES">Our Activities</a>-->
-<!--              <a class="dropdown-item" [routerLink]="AppUrl.FESTIVALS">Youth Fest</a>-->
-<!--              <a class="dropdown-item" [routerLink]="AppUrl.CAMPS">Camps</a>-->
-<!--              <a class="dropdown-item" [routerLink]="AppUrl.SCHOOL_PROGRAMS">School Programs</a>-->
-<!--              <a class="dropdown-item" [routerLink]="AppUrl.COLLEGE_PROGRAMS">College Programs</a>-->
-<!--            </div>-->
-<!--          </li>-->
-<!--          <li class="nav-item dropdown">-->
-<!--            <a class="nav-link dropdown-toggle" href="#" id="EAndTDropdown" role="button" data-toggle="dropdown"-->
-<!--               aria-haspopup="true" aria-expanded="false">-->
-<!--              Education & Training-->
-<!--            </a>-->
-<!--            <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-<!--              <a class="dropdown-item" [routerLink]="AppUrl.VEDIC_COURSES">Vedic Courses</a>-->
-<!--              <a class="dropdown-item" [routerLink]="AppUrl.COUNSELLING">Personal Mentors</a>-->
-<!--            </div>-->
 <!--          </li>-->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="festivalsDropdown" role="button" data-toggle="dropdown"
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
-              Festivals
+              Educate
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" [routerLink]="AppUrl.COUNSELLING">E Counselling</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              Events
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" [routerLink]="AppUrl.FESTIVALS">YOUTH FESTS</a>
-              <a class="dropdown-item" href="https://udgaar.in" target="_blank">UDGAAR 2019</a>
-              <a class="dropdown-item" [routerLink]="AppUrl.VIPLAVA">Viplava</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.CAMPS">CAMPS</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="festivalsDropdown" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              Outreach
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" [routerLink]="AppUrl.SCHOOL_PROGRAMS">SCHOOL PROGRAMS</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -66,6 +60,15 @@ Fixed Navigation
               <a class="dropdown-item" [routerLink]="AppUrl.SRILA_PRABHUPADA">Srila Prabhupada</a>
               <a class="dropdown-item" [routerLink]="AppUrl.ISKCON">ISKCON</a>
               <a class="dropdown-item" [routerLink]="AppUrl.ABOUT_US">About US</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              Contact
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" [routerLink]="AppUrl.CONTACT_US">Contact Us</a>
             </div>
           </li>
 <!--          <li class="nav-item dropdown">-->

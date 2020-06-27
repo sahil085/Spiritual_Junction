@@ -12,6 +12,10 @@ import {AboutIskconPageComponent} from './components/about-iskcon-page/about-isk
 import {ActivitiesPageComponent} from './components/activities-page/activities-page.component';
 import {FestivalsPageComponent} from './components/festivals-page/festivals-page.component';
 import {ViplavaPageComponent} from './components/viplava-page/viplava-page.component';
+import {CampsPageComponent} from './components/camps-page/camps-page.component';
+import {SchoolsPageComponent} from './components/schools-page/schools-page.component';
+import {CounsellingPageComponent} from './components/counselling-page/counselling-page.component';
+import {ContactPageComponent} from './components/contact-page/contact-page.component';
 
 
 const routes: Routes = [{
@@ -42,8 +46,17 @@ const routes: Routes = [{
   path: AppUrl.FESTIVALS,
   component: FestivalsPageComponent,
 }, {
-  path: AppUrl.VIPLAVA,
-  component: ViplavaPageComponent,
+  path: AppUrl.CAMPS,
+  component: CampsPageComponent,
+}, {
+  path: AppUrl.COUNSELLING,
+  component: CounsellingPageComponent,
+}, {
+  path: AppUrl.SCHOOL_PROGRAMS,
+  component: SchoolsPageComponent,
+}, {
+  path: AppUrl.CONTACT_US,
+  component: ContactPageComponent,
 }, {
   path: AppUrl.NOT_FOUND,
   component: NotFoundPageComponent

@@ -1,0 +1,11 @@
+.contact-page {
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+  justify-content: space-between;
+  .contact-info {
+    width: 40%;
+    font-size: 28px;
+    line-height: 140%;
+  }
+}

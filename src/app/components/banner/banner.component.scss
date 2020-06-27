@@ -1,3 +1,11 @@
+swiper {
+  height: 100vh;
+  max-height: 100vh;
+  img {
+    object-fit: cover;
+  }
+}
+
 .bg-black {
   background-color: black;
 }
