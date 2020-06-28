@@ -12,6 +12,7 @@ export class AppUrl {
   public static COLLEGE_PROGRAMS = 'college-programs';
   public static ACTIVITIES = 'activities';
   public static COURSES = 'courses';
+  public static VIEW_COURSES = 'view-courses';
   public static COUNSELLING = 'counselling';
   public static FESTIVALS = 'festivals';
   public static VIPLAVA = 'viplava';
@@ -20,5 +21,7 @@ export class AppUrl {
   public static ABOUT_US = 'about-us';
   public static FAQ = 'faq';
   public static CONTACT_US = 'contact-us';
+
+  public static COURSE = 'course';
 
 }

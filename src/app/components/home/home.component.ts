@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { AppUrl } from '../../constants/app-url';
+import {Component, OnInit} from '@angular/core';
+import {AppUrl} from '../../constants/app-url';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +8,12 @@ import { AppUrl } from '../../constants/app-url';
 })
 export class HomeComponent implements OnInit {
   AppUrl = AppUrl;
+  imageList = [
+    {src: 'https://iyfdelhi.com/wp-content/uploads/2020/05/Practical-Spirituality.jpg'},
+    {src: 'https://iyfdelhi.com/wp-content/uploads/2020/03/Viplava-Temp.jpg'},
+    {src: 'https://iyfdelhi.com/wp-content/uploads/2020/05/Practical-Spirituality.jpg'},
+    {src: 'https://iyfdelhi.com/wp-content/uploads/2020/05/Practical-Spirituality.jpg'},
+  ];
 
   activities = [{
     name: 'CAMPS',
@@ -31,7 +37,8 @@ export class HomeComponent implements OnInit {
     action_btn_link: '',
   }];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

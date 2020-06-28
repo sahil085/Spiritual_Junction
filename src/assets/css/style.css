@@ -419,9 +419,9 @@ a:focus, a:hover {
 
 .navigation .navbar-light .navbar-nav .nav-item .nav-link {
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 26px;
-  padding: 6px 15px;
+  padding: 6px 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: .2s ease-in-out 0s;

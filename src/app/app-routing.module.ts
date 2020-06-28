@@ -16,6 +16,7 @@ import {CampsPageComponent} from './components/camps-page/camps-page.component';
 import {SchoolsPageComponent} from './components/schools-page/schools-page.component';
 import {CounsellingPageComponent} from './components/counselling-page/counselling-page.component';
 import {ContactPageComponent} from './components/contact-page/contact-page.component';
+import {ViewCoursePageComponent} from './components/view-course-page/view-course-page.component';
 
 
 const routes: Routes = [{
@@ -48,6 +49,9 @@ const routes: Routes = [{
 }, {
   path: AppUrl.CAMPS,
   component: CampsPageComponent,
+}, {
+  path: AppUrl.VIEW_COURSES,
+  component: ViewCoursePageComponent,
 }, {
   path: AppUrl.COUNSELLING,
   component: CounsellingPageComponent,

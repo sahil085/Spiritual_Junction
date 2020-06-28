@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {SwiperOptions} from 'swiper';
 
 @Component({
@@ -8,6 +8,7 @@ import {SwiperOptions} from 'swiper';
 })
 export class BannerComponent implements OnInit {
 
+  @Input() imageList: any[];
 
   config: SwiperOptions = {
     pagination: { el: '.swiper-pagination', clickable: true },
