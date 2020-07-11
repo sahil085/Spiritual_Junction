@@ -11,12 +11,15 @@ import {SrilaPrabhupadaPageComponent} from './components/srila-prabhupada-page/s
 import {AboutIskconPageComponent} from './components/about-iskcon-page/about-iskcon-page.component';
 import {ActivitiesPageComponent} from './components/activities-page/activities-page.component';
 import {FestivalsPageComponent} from './components/festivals-page/festivals-page.component';
-import {ViplavaPageComponent} from './components/viplava-page/viplava-page.component';
 import {CampsPageComponent} from './components/camps-page/camps-page.component';
 import {SchoolsPageComponent} from './components/schools-page/schools-page.component';
 import {CounsellingPageComponent} from './components/counselling-page/counselling-page.component';
 import {ContactPageComponent} from './components/contact-page/contact-page.component';
 import {ViewCoursePageComponent} from './components/view-course-page/view-course-page.component';
+import {SingleCoursePageComponent} from './components/single-course-page/single-course-page.component';
+import {CourseListPageComponent} from './components/course-list-page/course-list-page.component';
+import {AdminPanelComponent} from './components/admin-panel/admin-panel.component';
+import {CreateCourseComponent} from './components/create-course/create-course.component';
 
 
 const routes: Routes = [{
@@ -64,6 +67,15 @@ const routes: Routes = [{
 }, {
   path: AppUrl.NOT_FOUND,
   component: NotFoundPageComponent
+}, {
+  path: AppUrl.SINGLE_COURSE,
+  component: SingleCoursePageComponent
+}, {
+  path: AppUrl.COURSE_LIST,
+  component: CourseListPageComponent
+}, {
+  path: AppUrl.CREATE_COURSE,
+  component: CreateCourseComponent
 }, {
   path: '**',
   redirectTo: '404'

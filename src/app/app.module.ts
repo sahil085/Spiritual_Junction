@@ -70,6 +70,10 @@ import { SchoolsPageComponent } from './components/schools-page/schools-page.com
 import { CounsellingPageComponent } from './components/counselling-page/counselling-page.component';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
 import { ViewCoursePageComponent } from './components/view-course-page/view-course-page.component';
+import { SingleCoursePageComponent } from './components/single-course-page/single-course-page.component';
+import { CourseListPageComponent } from './components/course-list-page/course-list-page.component';
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { CreateCourseComponent } from './components/create-course/create-course.component';
 
 const primeNgModules = [
   AccordionModule,
@@ -149,6 +153,10 @@ export function provideConfig() {
     CounsellingPageComponent,
     ContactPageComponent,
     ViewCoursePageComponent,
+    SingleCoursePageComponent,
+    CourseListPageComponent,
+    AdminPanelComponent,
+    CreateCourseComponent,
   ],
   imports: [
     BrowserModule,

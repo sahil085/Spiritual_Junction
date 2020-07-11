@@ -23,5 +23,8 @@ export class AppUrl {
   public static CONTACT_US = 'contact-us';
 
   public static COURSE = 'course';
+  public static SINGLE_COURSE = 'single-course';
+  public static COURSE_LIST = 'course-list';
+  public static CREATE_COURSE = 'course-create';
 
 }
