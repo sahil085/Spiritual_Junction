@@ -17,6 +17,7 @@ import {SchoolsPageComponent} from './components/schools-page/schools-page.compo
 import {CounsellingPageComponent} from './components/counselling-page/counselling-page.component';
 import {ContactPageComponent} from './components/contact-page/contact-page.component';
 import {ViewCoursePageComponent} from './components/view-course-page/view-course-page.component';
+import {FaqComponent} from './components/faq/faq.component';
 
 
 const routes: Routes = [{
@@ -64,6 +65,9 @@ const routes: Routes = [{
 }, {
   path: AppUrl.NOT_FOUND,
   component: NotFoundPageComponent
+}, {
+  path: AppUrl.FAQ,
+  component: FaqComponent
 }, {
   path: '**',
   redirectTo: '404'
