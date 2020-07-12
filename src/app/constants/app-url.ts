@@ -25,3 +25,7 @@ export class AppUrl {
   public static COURSE = 'course';
 
 }
+
+export class AdminRoutes {
+  public static ASSIGN_ROLE = 'assign-role';
+}

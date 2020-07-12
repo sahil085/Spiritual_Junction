@@ -70,6 +70,7 @@ import { SchoolsPageComponent } from './components/schools-page/schools-page.com
 import { CounsellingPageComponent } from './components/counselling-page/counselling-page.component';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
 import { ViewCoursePageComponent } from './components/view-course-page/view-course-page.component';
+import { AssignRolePageComponent } from './components/assign-role-page/assign-role-page.component';
 
 const primeNgModules = [
   AccordionModule,
@@ -149,6 +150,7 @@ export function provideConfig() {
     CounsellingPageComponent,
     ContactPageComponent,
     ViewCoursePageComponent,
+    AssignRolePageComponent,
   ],
   imports: [
     BrowserModule,

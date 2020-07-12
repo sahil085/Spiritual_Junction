@@ -16,3 +16,10 @@ export enum CollegeList {
   RKGIT = 'RKGIT Ghaziabad',
   IMSEC = 'IMS Engineering College'
 }
+
+export enum UserRoles {
+  MEMBER = 'MEMBER',
+  ADMIN = 'ADMIN',
+  PREACHER = 'PREACHER',
+  SUPER_ADMIN = 'SUPER_ADMIN',
+}

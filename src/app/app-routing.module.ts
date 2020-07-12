@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {AppUrl} from './constants/app-url';
+import {AdminRoutes, AppUrl} from './constants/app-url';
 import {AccessDeniedComponent} from './components/access-denied/access-denied.component';
 import {RegisterComponent} from './components/register/register.component';
 import {LoginComponent} from './components/login/login.component';
@@ -17,6 +17,7 @@ import {SchoolsPageComponent} from './components/schools-page/schools-page.compo
 import {CounsellingPageComponent} from './components/counselling-page/counselling-page.component';
 import {ContactPageComponent} from './components/contact-page/contact-page.component';
 import {ViewCoursePageComponent} from './components/view-course-page/view-course-page.component';
+import {AssignRolePageComponent} from './components/assign-role-page/assign-role-page.component';
 
 
 const routes: Routes = [{
@@ -61,6 +62,9 @@ const routes: Routes = [{
 }, {
   path: AppUrl.CONTACT_US,
   component: ContactPageComponent,
+}, {
+  path: AdminRoutes.ASSIGN_ROLE,
+  component: AssignRolePageComponent,
 }, {
   path: AppUrl.NOT_FOUND,
   component: NotFoundPageComponent
