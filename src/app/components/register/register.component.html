@@ -1,4 +1,4 @@
-<app-bread-crumb componentName="Sign Up"></app-bread-crumb>
+<app-bread-crumb class="text-center" componentName="Sign Up"></app-bread-crumb>
 <div class="container">
   <div class="row">
     <div class="col-12">
@@ -129,7 +129,7 @@
             *ngIf="!registerForm.controls['areaOfResidence'].valid&&registerForm.controls['areaOfResidence'].dirty">
           </p-message>
         </div>
-        <div class="input-container">
+        <div class="input-container text-center">
           <button pButton type="submit" label="Submit"
                   [disabled]="!registerForm.valid || registerForm.get('confirmPassword').value!==registerForm.get('password').value"></button>
         </div>
