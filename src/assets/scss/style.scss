@@ -2362,41 +2362,41 @@ textarea:focus {
   position: relative;
   z-index: 1;
   margin-bottom: 30px;
-  .nav-tab {
-      margin-bottom: 20px;
-      border-bottom: none;
-      .nav-items {
-          .nav-connect {
-              display: inline-block;
-              height: 40px;
-              background-color: transparent;
-              font-weight: 600;
-              text-transform: uppercase;
-              letter-spacing: 1px;
-              font-size: 14px;
-              color: rgba(0, 0, 0, 0.25);
-              border: 1px solid $border-color;
-              border-radius: 6px;
-              padding: 0 25px;
-              line-height: 40px;
-              @include trans-duration(800ms);
-              text-align: center;
-              margin-right: 10px;
-              margin-bottom: 10px;
-              &.active,
-              &:hover,
-              &:focus {
-                  font-size: 14px;
-                  font-weight: 600;
-                  color: rgba(0, 0, 0, 0.5);
-                  background-color: $border-color;
-              }
-          }
-          &:last-child {
-              .nav-connect {
-                  margin-right: 0;
-              }
-          }
-      }
-  }
+  // .nav-tab {
+  //     margin-bottom: 20px;
+  //     border-bottom: none;
+  //     .nav-items {
+  //         .nav-connect {
+  //             display: inline-block;
+  //             height: 40px;
+  //             background-color: transparent;
+  //             font-weight: 600;
+  //             text-transform: uppercase;
+  //             letter-spacing: 1px;
+  //             font-size: 14px;
+  //             color: rgba(0, 0, 0, 0.25);
+  //             border: 1px solid $border-color;
+  //             border-radius: 6px;
+  //             padding: 0 25px;
+  //             line-height: 40px;
+  //             @include trans-duration(800ms);
+  //             text-align: center;
+  //             margin-right: 10px;
+  //             margin-bottom: 10px;
+  //             &.active,
+  //             &:hover,
+  //             &:focus {
+  //                 font-size: 14px;
+  //                 font-weight: 600;
+  //                 color: rgba(0, 0, 0, 0.5);
+  //                 background-color: $border-color;
+  //             }
+  //         }
+  //         &:last-child {
+  //             .nav-connect {
+  //                 margin-right: 0;
+  //             }
+  //         }
+  //     }
+  // }
 }
