@@ -76,7 +76,13 @@ const routes: Routes = [{
 }, {
   path: AppUrl.CREATE_COURSE,
   component: CreateCourseComponent
-}, {
+},
+{
+  path: AppUrl.ADMIN_TEMPLATE,
+  component: AdminPanelComponent
+},
+
+{
   path: '**',
   redirectTo: '404'
 }
