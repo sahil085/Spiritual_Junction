@@ -10,6 +10,10 @@ export class AdminPanelComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    document.querySelector('.fixed-top').classList.add('d-none')
+    document.querySelector('#footer').classList.add('d-none')
   }
+
 
 }

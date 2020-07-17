@@ -26,5 +26,6 @@ export class AppUrl {
   public static SINGLE_COURSE = 'single-course';
   public static COURSE_LIST = 'course-list';
   public static CREATE_COURSE = 'course-create';
+  public static ADMIN_TEMPLATE = 'admin-dashboard';
 
 }
