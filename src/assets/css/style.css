@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,700|Source+Sans+Pro:400,600");
+@import 'css/bootstrap.min.css';
+ @import 'css/owl.carousel.min.css';
+ @import 'css/animate.css';
+ @import 'css/magnific-popup.css';
+ @import './font-awesome.min.css';
+ @import 'css/classy-nav.min.css';
 
 body {
   line-height: 1.4;
