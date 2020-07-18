@@ -1,5 +1,5 @@
 .dashboard{
-  margin: 0 30px;
+  padding: 0 15px;
 }
 .admin-panel{
   background-color: #243749;
@@ -19,17 +19,22 @@ img.avatar{
 
 .admin-content{
   background-color: #2e3e50;
-  a{
-    color: #fff;border-bottom: 1px solid #213345;display:block;padding: 15px 15px;
-    ul li{
-      color: #fff;display: inline-block;
-      h4 i{
-        font-size: 20px ; color: #fff;
-      }
-      h3{
-        color: #fff;padding-left: 10px;font-size: 20px;
-      }
 
+    ul{
+      padding: 0 10px;
+      li{
+        color: #fff;display: inline-block;
+        a{
+          color: #fff;border-bottom: 1px solid #213345;display:block;padding: 15px 0px;
+        }
+        h4 i{
+          font-size: 20px ; color: #fff;
+        }
+        h3{
+          color: #fff;padding-left: 10px;font-size: 20px;
+        }
+
+      }
     }
     ul li.right-arrow{
       width: 5%;float: right;
@@ -38,7 +43,7 @@ img.avatar{
       }
     }
   }
-}
+
 
 
 
