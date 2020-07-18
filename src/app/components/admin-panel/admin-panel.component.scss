@@ -1,0 +1,44 @@
+.dashboard{
+  margin: 0 30px;
+}
+.admin-panel{
+  background-color: #243749;
+}
+
+.card{
+  border: none;display: block;    height: 150px;width: 150px; border-radius: 50%;
+}
+.card-body{
+  padding: 10px 15px;
+}
+
+img.avatar{
+  width:150px ; height: 150px;vertical-align: middle;
+}
+
+
+.admin-content{
+  background-color: #2e3e50;
+  a{
+    color: #fff;border-bottom: 1px solid #213345;display:block;padding: 15px 15px;
+    ul li{
+      color: #fff;display: inline-block;
+      h4 i{
+        font-size: 20px ; color: #fff;
+      }
+      h3{
+        color: #fff;padding-left: 10px;font-size: 20px;
+      }
+
+    }
+    ul li.right-arrow{
+      width: 5%;float: right;
+      h5{
+        color: #fff;font-size: 20px;float: right;
+      }
+    }
+  }
+}
+
+
+
