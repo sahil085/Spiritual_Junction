@@ -1,0 +1,40 @@
+<app-bread-crumb componentName="Youth Fests"></app-bread-crumb>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="festival-header">
+        Our Festivals
+      </div>
+      <ul class="festival-section">
+        <li *ngFor="let festival of festivals; index as i;"
+            [ngClass]="{'festival-container': true, 'left': i%2===0, 'right': i%2===1}"
+        >
+          <div class="festival-img">
+            <img src="{{festival.image}}" alt="{{festival.name}}"/>
+          </div>
+          <div class="festival-content">
+            <div class="festival-title">
+              {{festival.name}}
+            </div>
+            <p class="festival-desc">
+              {{festival.desc}}
+            </p>
+            <a
+              [ngClass]="'round-btn'"
+              *ngIf="festival.inner_link"
+              [routerLink]="festival.inner_link">
+             LEARN MORE
+            </a>
+            <a
+              [ngClass]="'round-btn'"
+              *ngIf="festival.outer_link"
+              target="_blank"
+              href="{{festival.outer_link}}">
+              LEARN MORE
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

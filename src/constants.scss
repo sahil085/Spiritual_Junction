@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Quicksand:wght@400;500;600&display=swap');
+
+$black: #000000;
+$lightBlack: #161616;
+$gray: #ECECEC;
+$lightWhite: #FDFCFA;
+$white: #FFFFFF;
+$atoll: #0F6674;
+$darkAtoll: #09434C;
+$lightAtoll: #138799;
+
+
+$desktop-min-width: 880px;
+$desktop-max-width: 1050px;
+$desktop-header-height: 80px;
+$tablet-header-height: 70px;
+$mobile-header-height: 60px;
+$desktop-column-margin: 12px;
+$desktop-column-width: ($desktop-max-width + ($desktop-column-margin * 2)) / 3 - $desktop-column-margin * 2;
+
+$primaryFontRegular: 'Quicksand';
+$secondaryFontRegular: 'Poppins';

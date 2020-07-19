@@ -1,0 +1,24 @@
+<app-banner [imageList]="imageList"></app-banner>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <p-carousel [value]="courses"
+                  [circular]="true"
+                  [numVisible]="3"
+                  [numScroll]="1"
+                  [responsiveOptions]="responsiveOptions"
+      >
+        <ng-template let-course pTemplate="course">
+          <div class="course-card">
+            <div class="image-wrapper">
+              <img src="{{course.thumbnail}}"/>
+            </div>
+            <strong>{{course.title}}</strong>
+            <p>{{course.description}}</p>
+            <button><a routerLink="{{AppUrl.COURSE}}/{{course.id}}">View details</a></button>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+  </div>
+</div>

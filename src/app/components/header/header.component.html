@@ -1,0 +1,94 @@
+<!--
+Fixed Navigation
+==================================== -->
+<header class="navigation fixed-top">
+  <div class="container">
+    <!-- main nav -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <app-admin-panel></app-admin-panel>
+
+      <!-- logo -->
+      <a class="navbar-brand logo" href="index.html">
+        <img class="logo-default" width="50px" src="https://iyfdelhi.com/wp-content/uploads/2017/10/iyf-logo.png" alt="logo"/>
+        <img class="logo-white" width="50px" src="https://iyfdelhi.com/wp-content/uploads/2017/10/iyf-logo.png" alt="logo"/>
+      </a>
+      <!-- /logo -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+              aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="navbar-nav ml-auto text-center">
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" [routerLink]="AppUrl.HOME_PAGE">-->
+<!--              HOME-->
+<!--            </a>-->
+<!--          </li>-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              Educate
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" [routerLink]="AppUrl.VIEW_COURSES">Courses</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.COUNSELLING">E Counselling</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              Events
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" [routerLink]="AppUrl.FESTIVALS">YOUTH FESTS</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.CAMPS">CAMPS</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="festivalsDropdown" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              Outreach
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" [routerLink]="AppUrl.SCHOOL_PROGRAMS">SCHOOL PROGRAMS</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              About US
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" [routerLink]="AppUrl.SRILA_PRABHUPADA">Srila Prabhupada</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.ISKCON">ISKCON</a>
+              <a class="dropdown-item" [routerLink]="AppUrl.ABOUT_US">About US</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              Contact
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" [routerLink]="AppUrl.CONTACT_US">Contact Us</a>
+            </div>
+          </li>
+          <li *ngIf="!currentUser" class="nav-item">
+            <a [routerLink]="AppUrl.LOGIN" class="nav-link btn btn-transparent"> Login </a>
+          </li>
+          <li *ngIf="currentUser" class="nav-item">
+            <a (click)="logoutUser()" class="nav-link btn btn-transparent"> Logout </a>
+          </li>
+          <li *ngIf="!currentUser" class="nav-item">
+            <a [routerLink]="AppUrl.REGISTER" class="nav-link btn btn-transparent" style="margin-left: 10px"> Register </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /main nav -->
+  </div>
+</header>
+<!--
+End Fixed Navigation
+==================================== -->

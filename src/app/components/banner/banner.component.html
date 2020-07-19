@@ -1,0 +1,25 @@
+<swiper [config]="config">
+
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let image of imageList">
+      <img width="100%" style="object-fit: cover; height: 100%;" src="{{image.src}}" />
+    </div>
+<!--    <div class="swiper-slide">-->
+<!--      <img width="100%" style="object-fit: cover; height: 100%;" src="https://iyfdelhi.com/wp-content/uploads/2020/05/Practical-Spirituality.jpg" />-->
+<!--    </div><div class="swiper-slide">-->
+<!--      <img width="100%" style="object-fit: cover; height: 100%;" src="https://iyfdelhi.com/wp-content/uploads/2020/03/Viplava-Temp.jpg" />-->
+<!--    </div><div class="swiper-slide">-->
+<!--      <img width="100%" style="object-fit: cover; height: 100%;" src="https://iyfdelhi.com/wp-content/uploads/2020/05/Practical-Spirituality.jpg" />-->
+<!--    </div><div class="swiper-slide">-->
+<!--      <img width="100%" style="object-fit: cover; height: 100%;" src="https://iyfdelhi.com/wp-content/uploads/2020/05/Practical-Spirituality.jpg" />-->
+<!--    </div>-->
+  </div>
+
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+
+</swiper>

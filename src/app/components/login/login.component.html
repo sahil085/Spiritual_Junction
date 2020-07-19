@@ -1,0 +1,75 @@
+<app-bread-crumb class="text-center" [componentName]="'Login'"></app-bread-crumb>
+
+<section class="service-2">
+  <div class="form-container">
+    <span class="text-center m-4"><strong>Login in. To see it in action.</strong></span>
+
+    <div class="row text-center">
+      <div class="col-md-12 col-sm-6 col-xs-12">
+        <div class="service-item">
+          <form #loginForm="ngForm" (ngSubmit)="loginForm.form.valid && login()">
+            <div class="ui-g-12 ui-md-12">
+              <div class="ui-g ui-fluid">
+                <div class="ui-g-12 ui-sm-12">Email</div>
+                <input #username="ngModel"
+                       [(ngModel)]="email"
+                       id="email"
+                       pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                       type="email"
+                       name="username"
+                       class="ui-g-6 ui-inputtext"
+                       pInputText
+                       placeholder="Please enter email"
+                       required>
+                <div
+                  *ngIf="loginForm.submitted && username.invalid"
+                  class="validation-error">
+                  <div *ngIf="username.errors.required">Email is required</div>
+                  <div *ngIf="username.errors.pattern">Email is not valid</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-g-12 ui-md-12">
+              <div class="ui-g ui-fluid">
+                <div class="ui-g-12 ui-sm-12">Password</div>
+                <input
+                  #userPassword="ngModel"
+                  [(ngModel)]="password"
+                  autocomplete="new-password"
+                  id="password"
+                  name="userPassword"
+                  type="password"
+                  pInputText=""
+                  class="ui-g-6 ui-inputtext"
+                  placeholder="Please enter password"
+                  required="">
+              </div>
+              <div
+                *ngIf="userPassword.invalid && loginForm.submitted"
+                class="validation-error">
+                <div *ngIf="userPassword.errors.required">
+                  Please Enter Your Password
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-2">Login</button>
+
+          </form>
+          <div class="social-login-container">
+            <button class="google-btn" (click)="signInWithGoogle()">
+              Sign in with Google
+            </button>
+            <button class="fb-btn" (click)="signInWithFB()">
+              Sign in with Facebook
+            </button>
+          </div>
+
+          <span class="form-footer">Not a Member? <a routerLink="/{{AppUrl.REGISTER}}">Sign Up</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

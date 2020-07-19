@@ -1,0 +1,57 @@
+@mixin extra-small {
+  @media (max-width: 410px) {
+    @content
+  }
+}
+
+@mixin for-phone {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media (max-width: 1280px) and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin screenGreaterThan($size: 1024px) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin screenSmallerThan($size: 1024px) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin shady-loader($height, $width: 100%, $border-radius: 40px, $color: #000) {
+  width: $width;
+  height: $height;
+  background-color: $color;
+  border-radius: $border-radius;
+  animation: fading 1.5s infinite;
+}
+
+@keyframes fading {
+  0% {
+    opacity: .1;
+  }
+
+  50% {
+    opacity: .2;
+  }
+
+  100% {
+    opacity: .1;
+  }
+}

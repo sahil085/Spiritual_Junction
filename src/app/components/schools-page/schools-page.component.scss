@@ -1,0 +1,40 @@
+.image-wrapper {
+  & > img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.features {
+  line-height: 140%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  & > .feature {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    & > .card {
+      height: 250px;
+      img {
+        height: 100%;
+      }
+    }
+    & > .title {
+      font-weight: bold;
+      text-align: center;
+      padding: 8px;
+    }
+    & > .content {
+      text-align: justify;
+    }
+  }
+}
+
+.quote-text {
+  text-align: center;
+  margin: 30px 0;
+}

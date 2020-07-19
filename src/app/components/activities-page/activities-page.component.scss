@@ -1,0 +1,74 @@
+@import "./src/mixins.scss";
+@import "./src/constants.scss";
+
+.section-container {
+  margin: 30px 0;
+}
+
+.activity-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.activity-section > .section-header {
+  font-size: 32px;
+  text-align: center;
+  margin: 30px;
+}
+
+.activity-section > .activity-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  @include for-phone {
+    display: block;
+    margin: 0 30px;
+  }
+}
+
+.activity-section > .activity-list > .activity-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include for-desktop {
+    flex-basis: 22%;
+  };
+  @include for-tablet {
+    flex-basis: 46%;
+  }
+  @include for-phone {
+    margin-bottom: 30px;
+  }
+}
+
+.activity-section > .activity-list > .activity-card > .image-wrapper {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  border: 0;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.activity-section > .activity-list > .activity-card > .activity-name {
+  color: $black;
+  text-transform: uppercase;
+  margin: 12px;
+  font-size: 21px;
+  line-height: 120%;
+}
+
+.activity-section > .activity-list > .activity-card > .activity-desc {
+  margin-bottom: 12px;
+  line-height: 120%;
+}
