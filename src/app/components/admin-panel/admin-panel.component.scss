@@ -1,19 +1,30 @@
 .dashboard{
-  padding: 0 15px;
+  padding: 0;
+  display: inline-block;
+  width: 100%;
 }
 .admin-panel{
   background-color: #243749;
+  padding-top: 16px;
+  position: fixed;
+  width: inherit;
+  max-width: 25%;
+  overflow-y: auto;
+  height: 100%;
 }
 
+.admin-panel::-webkit-scrollbar{width:.25rem}
+.admin-panel::-webkit-scrollbar-thumb{background-color:#c1c1c1}
+
 .card{
-  border: none;display: block;    height: 150px;width: 150px; border-radius: 50%;
+  border: none;display: block;  padding:8px; margin-left: 16px;  height: 80px;width: 80px; border-radius: 50%;
 }
 .card-body{
   padding: 10px 15px;
 }
 
 img.avatar{
-  width:150px ; height: 150px;vertical-align: middle;
+  max-width: 100%; vertical-align: middle;
 }
 
 
@@ -28,10 +39,10 @@ img.avatar{
           color: #fff;border-bottom: 1px solid #213345;display:block;padding: 15px 0px;
         }
         h4 i{
-          font-size: 20px ; color: #fff;
+          font-size: 16px ; color: #fff;
         }
         h3{
-          color: #fff;padding-left: 10px;font-size: 20px;
+          color: #fff;padding-left: 10px;font-size: 16px;
         }
 
       }
@@ -45,5 +56,12 @@ img.avatar{
   }
 
 
+  /* Right Content CSS  */
+
+.main-dashboard.scrollable-box {
+    display: block;
+    overflow-y: auto;
+    height: 100%;
+}
 
 
