@@ -3,6 +3,8 @@
   display: inline-block;
   width: 100%;
 }
+
+// left content css
 .admin-panel{
   background-color: #243749;
   padding-top: 16px;
@@ -32,27 +34,29 @@ img.avatar{
   background-color: #2e3e50;
 
     ul{
-      padding: 0 10px;
+
       li{
-        color: #fff;display: inline-block;
+        color: #fff;display: inline-block; width: 100%;
         a{
-          color: #fff;border-bottom: 1px solid #213345;display:block;padding: 15px 0px;
+          color: #fff;border-bottom: 1px solid #213345;display:block;padding: 15px 15px; width: 90%;float: left;
+          h4 i{
+            font-size: 16px ; color: #fff;width: 25px;float: left;
+          }
+          h3{
+            color: #fff;padding-left: 20px;font-size: 16px;
+          }
         }
-        h4 i{
-          font-size: 16px ; color: #fff;
-        }
-        h3{
-          color: #fff;padding-left: 10px;font-size: 16px;
+
+        span.right-arrow{
+          width: 10%;float: right;
+          h5{
+            color: #fff;font-size: 20px; width: 30px;padding-top: 20px;
+          }
         }
 
       }
     }
-    ul li.right-arrow{
-      width: 5%;float: right;
-      h5{
-        color: #fff;font-size: 20px;float: right;
-      }
-    }
+
   }
 
 
@@ -63,5 +67,7 @@ img.avatar{
     overflow-y: auto;
     height: 100%;
 }
+
+
 
 
