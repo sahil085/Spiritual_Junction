@@ -69,5 +69,14 @@ img.avatar{
 }
 
 
+// responsive
+@media only screen and (max-width: 767px){
+.admin-panel{max-width: 50%;}
+.main-dashboard{padding-left: 10px;}
+.content-area h2{font-size: 22px;}
+}
 
-
+@media only screen and (max-width: 600px){
+.main-dashboard{max-width: 50%;float: right;}
+.content-area h2{font-size: 20px;}
+}
