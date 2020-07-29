@@ -1,0 +1,83 @@
+.dashboard{
+  padding: 0;
+  display: inline-block;
+  width: 100%;
+}
+
+// left content css
+.admin-panel{
+  background-color: #243749;
+  padding-top: 16px;
+  position: fixed;
+  width: inherit;
+  max-width: 25%;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.admin-panel::-webkit-scrollbar{width:.25rem}
+.admin-panel::-webkit-scrollbar-thumb{background-color:#c1c1c1}
+
+.card{
+  border: none;display: block;  padding:8px; margin-left: 16px;  height: 80px;width: 80px; border-radius: 50%;
+}
+.card-body{
+  padding: 10px 15px;
+}
+
+img.avatar{
+  max-width: 100%; vertical-align: middle;
+}
+
+
+.admin-content{
+  background-color: #2e3e50;
+
+    ul{
+
+      li{
+        color: #fff;display: inline-block; width: 100%;
+        a{
+          color: #fff;border-bottom: 1px solid #213345;display:block;padding: 15px 15px; width: 90%;float: left;
+          h4 i{
+            font-size: 16px ; color: #fff;width: 25px;float: left;
+          }
+          h3{
+            color: #fff;padding-left: 20px;font-size: 16px;
+          }
+        }
+
+        span.right-arrow{
+          width: 10%;float: right;
+          h5{
+            color: #fff;font-size: 20px; width: 30px;padding-top: 20px;
+          }
+        }
+
+      }
+    }
+
+  }
+
+
+  /* Right Content CSS  */
+
+.main-dashboard.scrollable-box {
+    display: block;
+    overflow-y: auto;
+    height: 100%;
+    padding:1rem;
+}
+
+
+// responsive
+@media only screen and (max-width: 767px){
+.admin-panel{max-width: 50%;}
+.main-dashboard{padding-left: 10px;}
+.content-area h2{font-size: 22px;}
+}
+
+@media only screen and (max-width: 600px){
+.main-dashboard{max-width: 50%;float: right;}
+.content-area h2{font-size: 20px;}
+}
